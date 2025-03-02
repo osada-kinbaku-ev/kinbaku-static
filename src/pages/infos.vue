@@ -1,7 +1,7 @@
 <template>
   <v-img
     cover
-    src="/dojo.jpg"
+    src="@/assets/dojo.jpg"
     class="mb-4"
   ></v-img>      
 
@@ -69,9 +69,9 @@
   </p>
 
   <v-row>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/tk.jpg" aspect-ratio="1" cover></v-img></v-col>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/neckrope.jpg" aspect-ratio="1" cover></v-img></v-col>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/strappado.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/tk.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/neckrope.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado.jpg" aspect-ratio="1" cover></v-img></v-col>
   </v-row>
 
   <h2>Sicherheit</h2>
@@ -118,9 +118,9 @@
   </p>
 
   <v-row>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/strappado3.jpg" aspect-ratio="1" cover></v-img></v-col>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/strappado.jpg" aspect-ratio="1" cover></v-img></v-col>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/strappado4.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado3.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado4.jpg" aspect-ratio="1" cover></v-img></v-col>
   </v-row>
 
   <h2>Konsens</h2>

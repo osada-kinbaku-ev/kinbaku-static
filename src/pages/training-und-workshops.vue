@@ -1,7 +1,7 @@
 <template>
   <v-img
     cover
-    src="/dojo.jpg"
+    src="@/assets/dojo.jpg"
     class="mb-4"
   ></v-img>
       
@@ -21,9 +21,9 @@
 
 
   <v-row>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/tk3.jpg" aspect-ratio="1" cover></v-img></v-col>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/tk4.jpg" aspect-ratio="1" cover></v-img></v-col>
-    <v-col class="d-flex child-flex" cols="4"><v-img src="/tk5.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/tk3.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/tk4.jpg" aspect-ratio="1" cover></v-img></v-col>
+    <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/tk5.jpg" aspect-ratio="1" cover></v-img></v-col>
   </v-row>
 
   <h3>Training ab Grundstufe (Kyu 9-7)</h3>
