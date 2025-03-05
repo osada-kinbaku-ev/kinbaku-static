@@ -18,7 +18,7 @@
     Schaut Euch um &ndash; wir freuen uns auf Euch!
   </p>
     
-  <h2>Ziele des Vereins</h2>
+  <h2 id="ziele">Ziele des Vereins</h2>
   <p>
     Der Verein hat sich zum Ziel gesetzt, Menschen mit Interesse an Shibari zu verbinden und diese in den Bereichen Fingerfertigkeit und Technik, Sicherheit und Konsens, Bewegungsoptimierung und ästhetik zu fördern. Dabei spielt die europäische Interpretation der japanischen Herkunft eine wichtige Rolle.
     Ein weiteres Ziel des Trainings ist es, das Muskelgedächtnis zu schulen, um eine möglichst hohe Sicherheit zu gewährleisten und Risiken zu minimieren. Durch gezielte Wiederholung einzelner übungen entsteht Routine, die in Gefahrensituationen Ruhe und Sicherheit verleiht.
@@ -37,7 +37,7 @@
   </v-row>
 
 
-  <h2>Mitgliedschaften</h2>
+  <h2 id="mitgliedschaften">Mitgliedschaften</h2>
   <p>
     Für Mitgliedschaften erheben wir Beiträge, wie Ihr es aus anderen Vereinen kennt. Diese werden in der Regel von der fesselnden Person bezahlt und beinhalten selbstverständlich ein Mitbringen von Trainingspartner:innen. Anfangs empfehlen wir, Tagesmitgliedschaften zu nutzen und erst in den Verein einzutreten, wenn sich eine gewisse Regelmäßigkeit abzeichnet.
   </p>

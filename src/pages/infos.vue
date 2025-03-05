@@ -6,7 +6,7 @@
     class="mb-4"
   ></v-img>      
 
-  <h2>Vor dem ersten Besuch</h2>
+  <h2 id="besuch">Vor dem ersten Besuch</h2>
 
   <p>
     Unsere Trainings sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.
@@ -75,7 +75,7 @@
     <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado.jpg" aspect-ratio="1" cover></v-img></v-col>
   </v-row>
 
-  <h2>Sicherheit</h2>
+  <h2 id="sicherheit">Sicherheit</h2>
 
   <p>
     Shibari kann physische und emotionale Risiken mit sich bringen, insbesondere wenn es falsch durchgeführt wird oder wenn die Beteiligten keine Erfahrung haben. Es ist daher von größter Bedeutung, dass Sicherheitsprotokolle und -techniken beachtet werden, um Verletzungen oder Schäden zu vermeiden und die entsprechenden Risiken zu beherrschen und zu minimieren.
@@ -124,7 +124,7 @@
     <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado4.jpg" aspect-ratio="1" cover></v-img></v-col>
   </v-row>
 
-  <h2>Konsens</h2>
+  <h2 id="consent">Consent</h2>
 
   <p>
     Es ist wichtig, dass Zustimmung jederzeit freiwillig und bewusst von allen erteilt wird, und dass die Grenzen und Wünsche aller Beteiligten respektiert werden. Im Osada Kinbaku Dojo e.V. messen wir dem Konsens einen großen Wert zu, um eine sichere und positive Erfahrung für alle Beteiligten zu gewährleisten.
@@ -154,7 +154,7 @@
     Und auch wenn dies in der Umkehrung nicht auf aktiv fesselnde Personen zutrifft, sind dennoch auch deren Grenzen klar zu beachten.
   </p>
 
-  <h2>Der Konsens im Training / Unsere Trainingskultur</h2>
+  <h2 id="consent-training">Der Consent im Training / Unsere Trainingskultur</h2>
   <p>
     Ein respektvolles Miteinander und gegenseitige Zustimmung sind essentiell für unsere Trainingskultur.
   </p>

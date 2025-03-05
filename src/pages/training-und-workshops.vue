@@ -6,7 +6,7 @@
     class="mb-4"
   ></v-img>
       
-  <h2>Training</h2>
+  <h2 id="training">Training</h2>
   <p>
     Wir vermitteln das Wissen auf eine ähnliche Weise wie in einem Kampfsportverein. Es gibt mehrere Stufen, die Ihr mit der Zeit erreichen könnt. Zunächst werden Grundlagen vermittelt, wie die Einhand- und Zweihand-Fesselung. Danach folgen darauf aufbauende komplexere Fesselungen. Ihr lernt in eurem eigenen Tempo, nicht durch Frontalunterricht. Dabei wird nicht nur auf die Technik geachtet, sondern auch auf die Haltung. Das Können spiegelt sich also nicht nur im theoretischen Verstehen wider, sondern auch in der praktischen Anwendung. Erst wenn eine Technik intensiv verinnerlicht wurde, begleiten wir Euch zum nächsten Schritt. Der Unterricht im Dojo unterscheidet sich dadurch von Workshop-Konzepten.
   </p>
@@ -120,7 +120,7 @@
     Trainiert wird Kyu-übergreifend, zum Beispiel &#39;ab Grundstufe&#39;, &#39;ab Mittelstufe&#39;. Geprüft wird immer nur jeweils eine der Kyu-Stufen.
   </p>
 
-  <h2>Workshops</h2>
+  <h2 id="workshops">Workshops</h2>
   <p>
     Zu unseren Workshops begrüßen wir alle, die neugierig sind und Neues erlernen oder vertiefen möchten.
   </p>
@@ -140,7 +140,7 @@
     Kommt vorbei und dehnt Eure Horizonte aus &ndash; wir freuen uns auf Euch!
   </p>
 
-  <h2>Die Einführungsveranstaltung</h2>
+  <h2 id="einführungsveranstaltung">Die Einführungsveranstaltung</h2>
   <p>
     Die Einführungsveranstaltung dient als Grundlage für den Unterricht im Kinbaku Dojo Berlin, kann aber auch eigenständig als Workshop für Fesselinteressierte wahrgenommen werden. Durch die Einführungsveranstaltung wollen wir sicherstellen, dass alle, die bei uns unterrichtet werden, über sicherheitsrelevante Aspekte informiert sind, aber auch vereinsinterne Regelungen kennen. Dies nimmt vorab etwas Zeit in Anspruch. Daher gliedern wir die Einführungsveranstaltung vom regulären Training ab. Die Einführungsveranstaltung ist die Voraussetzung, um an unserem Training für die Grundstufe teilnehmen zu können.
   </p>
@@ -171,7 +171,7 @@
     Der Workshop soll einen überblick verschaffen und für die Trainingsstunden vorbereiten. Im Training werden später die Lerninhalte vertieft.
   </p>
 
-  <h2>Einzelunterricht</h2>
+  <h2 id="einzelunterricht">Einzelunterricht</h2>
   <p>
     Auch Einzelunterricht könnt Ihr bei uns buchen. Ob als Berlin-Besuchende, aus zeitlichen Gründen oder weil Ihr andere Inhalte als im Training vertiefen möchtet, könnte der Einzelunterricht für Euch interessant sein.
   </p>

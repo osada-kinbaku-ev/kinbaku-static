@@ -20,6 +20,13 @@ app_routes.push(...[
 const router = createRouter({
   history: createWebHashHistory(),
   routes: app_routes,
+  scrollBehavior: function(to, from, savedPosition) {
+    if (to.hash) {
+        return {el: to.hash, top: 100}
+    } else {
+        return { x: 0, y: 0 }
+    }
+  },
 })
 
 // Workaround for https://github.com/vitejs/vite/issues/11804
