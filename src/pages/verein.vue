@@ -20,7 +20,7 @@
     
   <h2 id="ziele">Ziele des Vereins</h2>
   <p>
-    Der Verein hat sich zum Ziel gesetzt, Menschen mit Interesse an Shibari zu verbinden und diese in den Bereichen Fingerfertigkeit und Technik, Sicherheit und Konsens, Bewegungsoptimierung und ästhetik zu fördern. Dabei spielt die europäische Interpretation der japanischen Herkunft eine wichtige Rolle.
+    Der Verein hat sich zum Ziel gesetzt, Menschen mit Interesse an Shibari zu verbinden und diese in den Bereichen Fingerfertigkeit und Technik, Sicherheit und Consent, Bewegungsoptimierung und ästhetik zu fördern. Dabei spielt die europäische Interpretation der japanischen Herkunft eine wichtige Rolle.
     Ein weiteres Ziel des Trainings ist es, das Muskelgedächtnis zu schulen, um eine möglichst hohe Sicherheit zu gewährleisten und Risiken zu minimieren. Durch gezielte Wiederholung einzelner übungen entsteht Routine, die in Gefahrensituationen Ruhe und Sicherheit verleiht.
   </p>
   <p>

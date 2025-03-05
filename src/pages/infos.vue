@@ -110,7 +110,7 @@
     Vor jeder Shibari-Session ist es unerlässlich, offen zu kommunizieren und die ausdrückliche Einwilligung aller Beteiligten einzuholen.
   </p>
   <p>
-    Dies sollte auch Signale für das Abbrechen oder Anpassen der Aktivität einschließen. Mehr Details und unsere Trainingskultur findet Ihr <a href="http://www.kinbaku-dojo.de/konsent">hier</a>.
+    Dies sollte auch Signale für das Abbrechen oder Anpassen der Aktivität einschließen. Mehr Details und unsere Trainingskultur findet Ihr <router-link to="training-und-workshops#training">hier</router-link>.
   </p>
 
   <h3>Ausbildung durch erfahrene Trainerinnen und Trainer:</h3>
@@ -127,7 +127,7 @@
   <h2 id="consent">Consent</h2>
 
   <p>
-    Es ist wichtig, dass Zustimmung jederzeit freiwillig und bewusst von allen erteilt wird, und dass die Grenzen und Wünsche aller Beteiligten respektiert werden. Im Osada Kinbaku Dojo e.V. messen wir dem Konsens einen großen Wert zu, um eine sichere und positive Erfahrung für alle Beteiligten zu gewährleisten.
+    Es ist wichtig, dass Zustimmung jederzeit freiwillig und bewusst von allen erteilt wird, und dass die Grenzen und Wünsche aller Beteiligten respektiert werden. Im Osada Kinbaku Dojo e.V. messen wir dem Consent einen großen Wert zu, um eine sichere und positive Erfahrung für alle Beteiligten zu gewährleisten.
   </p>
   <p>
     Das Konzept des &quot;Wheel of Consent&quot; nach Betty Martin ist ein wichtiger Bestandteil unseres Ansatzes, um sicherzustellen, dass alle Handlungen einvernehmlich erfolgen und die Wünsche und Grenzen aller Individuen respektiert werden.
@@ -142,7 +142,7 @@
     Kostenloses Infomaterial zum &quot;Wheel of Consent&quot; findet ihr auf der Seite von Betty Martin: <a href="https://bettymartin.org/wp-content/uploads/2020/10/German.pdf">Wheel of Consent</a>
   </p>
   <p>
-    Trotzdem sollte beachtet werden, dass alles Wissen und Lernen auch hier dazu dient, Risiken zu minimieren. Das Risiko einer ungewollten Konsensverletzung, damit meinen wir das unbewusste und nicht beabsichtigte übertreten einer Grenze, kann nur sehr schwer komplett vermieden werden, wie auch bei physischen Unfällen.
+    Trotzdem sollte beachtet werden, dass alles Wissen und Lernen auch hier dazu dient, Risiken zu minimieren. Das Risiko einer ungewollten Consent-Verletzung, damit meinen wir das unbewusste und nicht beabsichtigte übertreten einer Grenze, kann nur sehr schwer komplett vermieden werden, wie auch bei physischen Unfällen.
   </p>
   <p>
     Hier ist es wichtig, einen wohlwollenden Umgang miteinander zu pflegen, Verantwortung zu übernehmen und Reflektion zuzulassen. In Einzelfällen kann es sinnvoll sein, Mediator:innen einzuschalten. Falls ihr ein Anliegen habt, scheut euch nicht, uns anzusprechen.
