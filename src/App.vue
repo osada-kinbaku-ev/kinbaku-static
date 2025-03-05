@@ -70,4 +70,7 @@ h3 {
 .indent {
   margin-left: 2em;
 }
+.indent.v-list-item--variant-text .v-list-item__overlay {
+  opacity: 0;
+}
 </style>
