@@ -32,3 +32,22 @@
     }),
   }
 </script>
+
+<style>
+p {
+  margin-bottom: .5em;
+}
+
+h1 {
+  margin-top: 1.2em;
+  margin-bottom: 1em;
+}
+h2 {
+  margin-top: 1.1em;
+  margin-bottom: .7em;
+}
+h3 {
+  margin-top: .8em;
+  margin-bottom: .5em;
+}
+</style>
