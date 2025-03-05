@@ -2,6 +2,7 @@
   <v-img
     cover
     src="@/assets/dojo.jpg"
+    max-height="240px"
     class="mb-4"
   ></v-img>
       

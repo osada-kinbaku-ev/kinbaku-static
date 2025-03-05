@@ -1,6 +1,7 @@
 <template>
   <v-img
     cover
+    max-height="240px"
     src="@/assets/dojo.jpg"
     class="mb-4"
   ></v-img>
