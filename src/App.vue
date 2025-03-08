@@ -1,9 +1,10 @@
 <template>
   <v-app>
-    <v-app-bar title="Osada Kinbaku Dojo e.V.">
+    <v-app-bar>
       <template v-slot:prepend>
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>    
       </template>
+      <v-toolbar-title style="cursor: pointer" @click="$router.push('verein')" >Osada Kinbaku Dojo e.V.</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer
