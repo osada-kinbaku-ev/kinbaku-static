@@ -9,11 +9,18 @@
           <strong>Das Osada Kinbaku Dojo Berlin unterrichten Shibari an fünf wöchtenlichen Terminen und veranstaltet Workshops und Events.</strong>
           <p class="mt-15">
             <v-btn 
+              class="mr-5"
+              variant="outlined" 
+              to="intro"
+              append-icon="mdi-chevron-right">
+              Einführungsveranstaltung
+            </v-btn>
+            <v-btn 
               variant="outlined" 
               to="training"
               append-icon="mdi-chevron-right">
-              Anmeldung zum Training
-            </v-btn>
+              Training
+            </v-btn>            
           </p>
         </div>
     </video-background>

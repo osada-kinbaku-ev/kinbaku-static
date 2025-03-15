@@ -9,7 +9,8 @@
   <v-container>
     <h1 class="text-center mb-1">Trainingstermine</h1>
     <p class="mt-3 text-center">
-      Bevor du beim Training fesseln kannst, musst du einen Einführungsworkshop besuchen.
+      Bevor du beim Training fesseln kannst, musst du einen 
+      <router-link to="intro">Einführungsworkshop</router-link> besuchen.
     </p>
     <p class="my-8">
       <v-data-table class="text-center"
