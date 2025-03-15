@@ -84,6 +84,6 @@ export default {
     for (const d of this.events) {
       d.date = new Date(Date.parse(d.date_string));
     }
-  }
+  },
 }
 </script>

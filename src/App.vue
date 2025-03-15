@@ -4,13 +4,15 @@
       <template v-slot:prepend>
         <v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>    
       </template>
-      <v-toolbar-title style="cursor: pointer" @click="$router.push('verein')" >Osada Kinbaku Dojo e.V.</v-toolbar-title>
+      <v-toolbar-title style="cursor: pointer" @click="$router.push('home')" >Osada Kinbaku Dojo e.V.</v-toolbar-title>
     </v-app-bar>
 
     <v-navigation-drawer
         v-model="drawer"
         :location="left"
       >
+      <v-list-item to="home" title="Start"></v-list-item>
+      <v-list-item to="training" title="Training"></v-list-item>
       <v-list-item to="verein" title="Verein"></v-list-item>
       <v-list-item class="indent" to="verein#ziele" title="Ziele des Vereins"></v-list-item>
       <v-list-item class="indent" to="verein#mitgliedschaften" title="Mitgliedschaften"></v-list-item>
@@ -21,7 +23,6 @@
       <v-list-item class="indent" to="infos#sicherheit" title="Sicherheit und Risiken"></v-list-item>
       <v-list-item class="indent" to="infos#consent" title="Consent"></v-list-item>
       <v-list-item class="indent" to="infos#consent-training" title="Consent im Training"></v-list-item>
-
 
       <v-list-item to="training-und-workshops" title="Training und Workshops"></v-list-item>
       <v-list-item class="indent" to="training-und-workshops#training" title="Training"></v-list-item>
