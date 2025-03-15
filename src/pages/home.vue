@@ -5,17 +5,18 @@
       style="max-height: 400px; height: 100vh;"
       >
         <div class="px-10" style="color: white;">
-          <h1 style="color: white; font-size: 50px;">Shibari lernen</h1>
+          <h1 style="color: white; font-size: 50px; margin-top: 20px">Shibari lernen</h1>
           <strong>Das Osada Kinbaku Dojo Berlin unterrichten Shibari an fünf wöchtenlichen Terminen und veranstaltet Workshops und Events.</strong>
           <p class="mt-15">
             <v-btn 
-              class="mr-5"
+              class="mr-5 mb-5"
               variant="outlined" 
               to="intro"
               append-icon="mdi-chevron-right">
               Einführungsveranstaltung
             </v-btn>
             <v-btn 
+              class="mb-5"
               variant="outlined" 
               to="training"
               append-icon="mdi-chevron-right">
