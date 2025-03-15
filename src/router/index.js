@@ -13,7 +13,7 @@ let app_routes = setupLayouts(routes);
 app_routes.push(...[
   {
     path: '/',
-    redirect: '/verein'
+    redirect: '/home'
   },
 ])
 
