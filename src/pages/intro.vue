@@ -16,7 +16,7 @@
       Die Einführungsveranstaltung wird überwiegend frontal unterrichtet und unterscheidet sich daher sehr vom üblichen Trainingskonzept. Wir nehmen uns also etwas mehr Zeit - wir machen kurze Pausen - bringt Euch also gern einen Snack mit.
     </p>
 
-    <v-timeline align="start" class="mt-4">
+    <v-timeline align="start" class="mt-4" side="end">
       <v-timeline-item
         v-for="(item, i) in items"
         :key="i"
