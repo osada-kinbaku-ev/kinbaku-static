@@ -19,20 +19,20 @@
       <!-- <v-list-item class="indent" to="verein#trainerinnen" title="Trainerinnen und Trainer"></v-list-item> -->
 
       <v-list-item to="infos" title="Infos"></v-list-item>
-      <v-list-item class="indent" to="infos#besuch" title="Vor dem ersten Besuch"></v-list-item>
+      <!-- <v-list-item class="indent" to="infos#besuch" title="Vor dem ersten Besuch"></v-list-item> -->
       <v-list-item class="indent" to="infos#sicherheit" title="Sicherheit und Risiken"></v-list-item>
       <v-list-item class="indent" to="infos#consent" title="Consent"></v-list-item>
       <v-list-item class="indent" to="infos#consent-training" title="Consent im Training"></v-list-item>
 
       <v-list-item to="training-und-workshops" title="Training und Workshops"></v-list-item>
-      <v-list-item class="indent" to="training-und-workshops#training" title="Training"></v-list-item>
+      <!-- <v-list-item class="indent" to="training-und-workshops#training" title="Training"></v-list-item> -->
       <v-list-item class="indent" to="training-und-workshops#workshops" title="Workshops"></v-list-item>
-      <v-list-item class="indent" to="training-und-workshops#einführungsveranstaltung" title="Einführungsveranstaltung"></v-list-item>
+      <!-- <v-list-item class="indent" to="training-und-workshops#einführungsveranstaltung" title="Einführungsveranstaltung"></v-list-item> -->
       <v-list-item class="indent" to="training-und-workshops#einzelunterricht" title="Einzelunterricht"></v-list-item>
 
       <v-list-item to="galerie" title="Galerie"></v-list-item>
 
-      <v-list-item to="kurse" title="Kurse"></v-list-item>
+      <!-- <v-list-item to="kurse" title="Kurse"></v-list-item> -->
 
       <v-divider></v-divider>
 
