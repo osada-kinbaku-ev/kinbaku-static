@@ -8,12 +8,7 @@
       <v-card>
         <v-toolbar>
           <v-btn icon="mdi-close" @click="dialog = false"></v-btn>
-
           <v-toolbar-title>Anmeldung {{ event.title }}</v-toolbar-title>
-
-          <v-toolbar-items>
-            <v-btn text="Absenden" variant="text" @click="dialog = false"></v-btn>
-          </v-toolbar-items>
         </v-toolbar>
 
         <v-card-text>
