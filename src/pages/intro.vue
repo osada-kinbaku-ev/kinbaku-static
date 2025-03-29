@@ -45,11 +45,7 @@
         hide-default-footer
       >
         <template v-slot:item.controls="props">
-          <v-btn class="mx-2" fab dark small 
-            color="primary" variant="outlined"
-            :href="props.item.href">
-            Anmelden
-          </v-btn>
+          <EventRegister :event="props.item"></EventRegister>
         </template>    
       </v-data-table>
     </p>
@@ -78,13 +74,15 @@
 </template>
 
 <script>
+import EventRegister from '@/components/EventRegister.vue';
+
 export default {
   data: () => ({
     intro_times: [
-      {date_string: '22 Mar 2025', time: '12.00 - 20.00', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688912.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-      {date_string: '12 Apr 2025', time: '12.00 - 20.00', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688913.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-      {date_string: '26 Apr 2025', time: '12.00 - 20.00', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688914.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-      {date_string: '10 May 2025', time: '12.00 - 20.00', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688916.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
+      {date_string: '22 Mar 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688912.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
+      {date_string: '12 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688913.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
+      {date_string: '26 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688914.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
+      {date_string: '10 May 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688916.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
     ],
     intro_headers: [
       {value: "date"},
