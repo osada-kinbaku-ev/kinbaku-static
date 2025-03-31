@@ -12,7 +12,6 @@
       </div>
       <div class="d-sm-flex flex-row align-right py-2">
         <div class="px-2"><router-link to="datenschutz">Datenschutzerklärung</router-link></div>
-        <div class="px-2"><router-link to="impressum">Impressum</router-link></div>
       </div>
     </div>
     <div class="grey darken-4 d-md-flex flex-row justify-space-between pa-6">
@@ -26,11 +25,12 @@
       <div>
         <p>Registernummer</p>
         <p>VR 29488 B at AG Berlin (Charlottenburg)</p>
+        <!-- <p>Umsatzsteuer-Identifikationsnummer: </p> -->
       </div>
       <div>
-        <p>Vorstand</p>
+        <p>Vertreten durch</p>
         <p class="white--text text--darken-2">
-          Alexander Esser<br/>
+          Alexander Esser (Vorsitz)<br/>
           Anser Janczyk<br/>
         </p>
       </div>
