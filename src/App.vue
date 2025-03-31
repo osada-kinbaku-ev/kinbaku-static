@@ -31,8 +31,8 @@
         verein: "Verein",
         training: "Training",
         intro: "Einführungsveranstaltung",
-        kurse: "Events",
-        infos: "Sicherheit & Consent",
+        events: "Events",
+        "sicherheit-und-consent": "Sicherheit & Consent",
         galerie: "Galerie",
       }
     }),
