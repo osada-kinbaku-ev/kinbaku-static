@@ -118,7 +118,7 @@ export default {
       {day: 'montags', time: '20.00 - 21.30', location: 'Kreuzberg'},
       {day: 'mittwochs', time: '18.00 - 19.30', location: 'Neukölln'},
       {day: 'mittwochs', time: '20.00 - 21.30', location: 'Neukölln'},
-      {day: 'donnerstag', time: '18.00 - 21.30', location: 'Pankow'},
+      {day: 'donnerstags', time: '18.00 - 21.30', location: 'Pankow'},
     ],
     before_you_go: [
       {title: 'Atmosphäre', text: 'Unsere Trainings sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.'},
