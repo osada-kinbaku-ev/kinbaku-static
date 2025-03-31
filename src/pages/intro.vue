@@ -33,24 +33,26 @@
       </v-timeline-item>
     </v-timeline>
   </v-container>
-  <v-container fluid style="background: #eee;">
-    <h1 class="text-center mb-5">Termine</h1>
-    <p class="text-center">
-      <v-data-table 
-        style="background: transparent;" 
-        class="text-center"
-        :items="intro_times"
-        :headers="intro_headers"
-        hide-default-header
-        hide-default-footer
-      >
-        <template v-slot:item.controls="props">
-          <EventRegister :event="props.item"></EventRegister>
-        </template>    
-      </v-data-table>
-    </p>
+  <v-container class="m-0 p-0" fluid style="background: #eee;">
+    <v-container>
+      <h1 class="text-center mb-5">Termine</h1>
+      <p class="text-center">
+        <v-data-table 
+          style="background: transparent;" 
+          class="text-center"
+          :items="intro_times"
+          :headers="intro_headers"
+          hide-default-header
+          hide-default-footer
+        >
+          <template v-slot:item.controls="props">
+            <EventRegister :event="props.item"></EventRegister>
+          </template>    
+        </v-data-table>
+      </p>
+    </v-container>
   </v-container>
-  <v-container fluid>
+  <v-container>
     <h1 class="text-center mb-1">Vor dem Besuch</h1>
     <v-row>
       <v-col cols="12" md="4" v-for="byg, idx in before_you_go">

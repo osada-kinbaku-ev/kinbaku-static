@@ -6,7 +6,7 @@
     class="mb-4"
   ></v-img>      
 
-  <v-container fluid>
+  <v-container>
     <v-row>
       <v-col cols="12" md="4" v-for="event, idx in events">
         <v-card

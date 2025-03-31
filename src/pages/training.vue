@@ -28,51 +28,53 @@
       >Anmeldung</v-btn>
     </p>
   </v-container>
-  <v-container fluid style="background: #eee;">
-    <h1 class="text-center mb-1">Trainingsinhalte</h1>
-    <v-row>
-      <v-col cols="12" md="4" v-for="p, idx in pattern">
-        <v-card
-          v-bind:key="idx"
-          class="mx-auto my-3"
-        >
+  <v-container fluid class="m-0 p-0" style="background: #eee;">
+    <v-container>
+      <h1 class="text-center mb-1">Trainingsinhalte</h1>
+      <v-row>
+        <v-col cols="12" md="4" v-for="p, idx in pattern">
+          <v-card
+            v-bind:key="idx"
+            class="mx-auto my-3"
+          >
 
-          <v-carousel height="250" :show-arrows="p.images.length > 1">
-            <v-carousel-item
-              v-for="image, idx in p.images" v-bind:key="idx"
-              :src="image"
-              height="250"
-              cover
-            ></v-carousel-item>
-          </v-carousel>
+            <v-carousel height="250" :show-arrows="p.images.length > 1">
+              <v-carousel-item
+                v-for="image, idx in p.images" v-bind:key="idx"
+                :src="image"
+                height="250"
+                cover
+              ></v-carousel-item>
+            </v-carousel>
 
-          <v-card-item>
-            <v-card-title>{{ p.name }}</v-card-title>
+            <v-card-item>
+              <v-card-title>{{ p.name }}</v-card-title>
 
-            <v-card-subtitle>
-              <span class="me-1">{{ p.subtitle }}</span>
+              <v-card-subtitle>
+                <span class="me-1">{{ p.subtitle }}</span>
 
-            </v-card-subtitle>
-          </v-card-item>
+              </v-card-subtitle>
+            </v-card-item>
 
-          <v-card-text>
+            <v-card-text>
 
-            <div class="mb-3 text-subtitle-1">
-              <v-icon
-                icon="mdi-stairs"
-                size="small"
-              ></v-icon>
-              {{ p.level }}
-            </div>
+              <div class="mb-3 text-subtitle-1">
+                <v-icon
+                  icon="mdi-stairs"
+                  size="small"
+                ></v-icon>
+                {{ p.level }}
+              </div>
 
-            <div>{{ p.desc }}</div>
-          </v-card-text>
+              <div>{{ p.desc }}</div>
+            </v-card-text>
 
-        </v-card>
-      </v-col>  
-    </v-row>
+          </v-card>
+        </v-col>  
+      </v-row>
+    </v-container>
   </v-container>
-  <v-container fluid>
+  <v-container>
     <h1 class="text-center mb-1">Vor dem ersten Besuch</h1>
     <v-row>
       <v-col cols="12" md="4" v-for="byg, idx in before_you_go">

@@ -4,6 +4,7 @@
       :src="video"
       style="max-height: 400px; height: 100vh;"
       >
+      <v-container>
         <div class="px-10" style="color: white;">
           <h1 style="color: white; font-size: 50px; margin-top: 20px">Shibari lernen</h1>
           <strong>Das Osada Kinbaku Dojo Berlin unterrichten Shibari an fünf wöchtenlichen Terminen und veranstaltet Workshops und Events.</strong>
@@ -24,9 +25,10 @@
             </v-btn>            
           </p>
         </div>
+      </v-container>
     </video-background>
   </v-card>
-  <v-container fluid>
+  <v-container>
     <h2 class="text-center mb-0">Aktuelle Workshops und Events</h2>
     <v-row>
       <v-col cols="12" md="4" v-for="event, idx in events">
