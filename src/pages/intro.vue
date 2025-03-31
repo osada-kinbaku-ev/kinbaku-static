@@ -86,13 +86,6 @@ export default {
       {date_string: '26 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688914.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
       {date_string: '10 May 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688916.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
     ],
-    intro_headers: [
-      {value: "date"},
-      {value: "time"},
-      {value: "location"},
-      {value: "audience"},
-      {value: "controls"},
-    ],
     before_you_go: [
       {title: 'Atmosphäre', text: 'Die Einführungsworkshops sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.'},
       {title: 'Vorkenntnisse', text: 'Der Einführungsworkshop benötigt keine Vorkenntnisse. Auch Personen mit Vorkenntnissen sind willkommen!'},
@@ -123,5 +116,23 @@ export default {
       d.date = new Date(Date.parse(d.date_string)).toLocaleDateString("de-DE", date_locale_options)
     }
   },  
+  computed: {
+    intro_headers: function () {
+      return this.$vuetify.display.mobile ? 
+      [
+        {value: "date"},
+        {value: "time"},
+        {value: "location"},
+        {value: "controls"},
+      ] :
+      [
+        {value: "date"},
+        {value: "time"},
+        {value: "location"},
+        {value: "audience"},
+        {value: "controls"},
+      ];
+    },
+  },
 }
 </script>
