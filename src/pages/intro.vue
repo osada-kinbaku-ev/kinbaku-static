@@ -77,15 +77,11 @@
 
 <script>
 import EventRegister from '@/components/EventRegister.vue';
+import {intro_times} from '@/data'
 
 export default {
   data: () => ({
-    intro_times: [
-      {date_string: '22 Mar 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688912.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-      {date_string: '12 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688913.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-      {date_string: '26 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688914.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-      {date_string: '10 May 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688916.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-    ],
+    intro_times: intro_times,
     before_you_go: [
       {title: 'Atmosphäre', text: 'Die Einführungsworkshops sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.'},
       {title: 'Vorkenntnisse', text: 'Der Einführungsworkshop benötigt keine Vorkenntnisse. Auch Personen mit Vorkenntnissen sind willkommen!'},
