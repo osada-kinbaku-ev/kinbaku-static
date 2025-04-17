@@ -1,4 +1,4 @@
-name: Vue app deployment
+name: Deployment
 
 on:
     push:
@@ -14,23 +14,39 @@ jobs:
             matrix:
                 node-version: [18.x]
 
+        environment:
+            name: a4a
+
         steps:
             - uses: actions/checkout@v4
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v3
               with:
                   node-version: ${{ matrix.node-version }}
-            - name: Build the dist
+            - name: Build the static dist
               run: |
                   npm ci
                   npm run build --if-present
-            - name: Upload static files as artifact
-              id: deployment
+            - name: Create static files artifact
+              id: deployment-static
               uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
               with:
                 path: dist/
+                name: static
+            - name: set up API environment
+              env:
+                KINBAKU_EVENT_ADMIN_EMAIL_ADDR: ${{ vars.EVENT_ADMIN_EMAIL }}
+              run: |
+                echo KINBAKU_EVENT_ADMIN_EMAIL_ADDR=$KINBAKU_EVENT_ADMIN_EMAIL_ADDR >> api/.env
+            - name: Create API files artifact
+              id: deployment-api
+              uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
+              with:
+                path: api/
+                name: api
 
-    deploy:
+
+    deploy-gh-pages:
         needs: build
 
         permissions:
@@ -46,3 +62,44 @@ jobs:
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
+              with:
+                artifact_name: static
+
+    deploy-a4a:
+        needs: build
+
+        environment:
+            name: a4a
+            url: ${{ vars.URL }}
+
+        env:
+            SSHPASS: ${{ secrets.SSHPASS }}
+            SSHUSER: ${{ vars.SSHUSER }}
+            SSHHOST: ${{ vars.SSHHOST }}
+            SSHPATHAPI: ${{ vars.SSHPATHAPI }}
+            SSHPATHSTATIC: ${{ vars.SSHPATHSTATIC }}
+            SSHKNOWNHOSTS: ${{ vars.SSHKNOWNHOSTS }}
+
+        runs-on: ubuntu-latest
+        steps:
+            - name: Download artifacts
+              uses: actions/download-artifact@v4
+
+            - name: Unzip artifacts
+              run: |
+                (cd static && tar -xvf artifact.tar && rm artifact.tar)
+                (cd api && tar -xvf artifact.tar && rm artifact.tar)
+
+            - name: Set SSH known hosts
+              run: |
+                mkdir $HOME/.ssh
+                echo "$SSHKNOWNHOSTS" >> $HOME/.ssh/known_hosts
+
+            - name: upload API
+              run: |
+                echo $SSHHOST
+                sshpass -e scp -r api/. ${SSHUSER}@${SSHHOST}:$SSHPATHAPI
+
+            - name: upload static pages
+              run: |
+                sshpass -e scp -r static/. ${SSHUSER}@${SSHHOST}:$SSHPATHSTATIC

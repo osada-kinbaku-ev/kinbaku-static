@@ -1,0 +1,13 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !api\.php$ [NC]
+RewriteRule ^(.*)$ api.php?$1 [NC,L,QSA]
+
+Deny From All
+<FilesMatch "api\.php$">
+    Allow From All
+</FilesMatch>
+
+# List all permissible API paths here
+<FilesMatch "anmeldung$">
+    Allow From All
+</FilesMatch>

@@ -77,7 +77,14 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 const email_pattern = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,})$/;
+
+const HTTP = axios.create({
+  baseURL: '/api/',
+  headers: {},
+});
 
 export default {
   data: () => ({
@@ -91,7 +98,8 @@ export default {
     'event',
   ],
   methods: {
-    register: function() {
+    register: async function() {
+      // better use if (!this.$refs.form.validate()) instead of the following manual checks
       if (this.name.length < 2) {
         this.response = {status: 'Bitte gib einen Namen an.'}
         return
@@ -102,12 +110,18 @@ export default {
       }
       let request = {
         name: this.name,
-        email: this.email,
+        addr: this.email,
         event: this.event,
       }
-      console.log(request)
       this.loading = true // TODO contact server
-      setTimeout(() => {this.loading = false; this.response = {status: 'success'}}, 1000)
+
+      this.response = {}
+      try {
+        this.response = (await HTTP.post('anmeldung', request)).data
+      } catch (ex) {
+        this.response = {status: ex + ""}
+      }
+      this.loading = false;
     },
   },
   computed: {
