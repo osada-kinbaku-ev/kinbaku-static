@@ -46,6 +46,7 @@
     <h3>Tagesmitgliedschaften</h3>
     <p>
       Eine Trainingseinheit kostet 20,- &euro;.
+    </p>
       
       <ul>
         <li>
@@ -60,7 +61,7 @@
       </ul>
       
 
-    </p>
+    
 
     <h3>Einzelunterricht</h3>
 
