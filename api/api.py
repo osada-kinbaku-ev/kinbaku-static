@@ -40,7 +40,9 @@ def template_email_register_event_admin(
         f"{people_num} Person(en) haben sich mit der Adresse {addr} soeben zu {event_str} angemeldet. Namen:\n\n"
         + names.join(', ') +
         "\n\nKommentar:\n\n"
-        + comment
+        + comment +
+        "\n\nEvent details:\n\n"
+        + json.dumps(event, indent=4)
     )
 
 
@@ -77,7 +79,7 @@ def register(names: list[str], people_num: int, addr: str, comment: str, event: 
 
     email(addr, *template_email_register_participant(people_num, event))
     email(
-        EVENT_ADMIN_EMAIL_ADDR, *template_email_register_event_admin(addr, names, people_num, comment, event)
+        EVENT_ADMIN_EMAIL_ADDR, *template_email_register_event_admin(names, people_num, addr, comment, event)
     )
     return dict(status="success")
 
