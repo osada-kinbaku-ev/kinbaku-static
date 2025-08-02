@@ -22,6 +22,7 @@ export let intro_times =  [
         fee_eur_per_person: 40.00,
         people_min: 1,
         people_max: 2,
+        image: image_single_column_tie,
     },
     {
         date_string: '30 Aug 2025', time: '12.00 - 18.30',
@@ -33,6 +34,7 @@ export let intro_times =  [
         fee_eur_per_person: 32.50,
         people_min: 2,
         people_max: 2,
+        image: image_strappado,
     },
   ];
 

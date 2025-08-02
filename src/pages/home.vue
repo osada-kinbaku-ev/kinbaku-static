@@ -88,12 +88,12 @@
 <script>
 import VideoBackground from 'vue-responsive-video-background-player'
 import video from '@/assets/rope.mp4'
-import {events} from '@/data'
+import {events, intro_times} from '@/data'
 
 export default {
   data: () => ({
     video: video,
-    events: events,
+    events: events.concat(intro_times),
     date_locale_options: {
       weekday: 'short',
       month: 'numeric',
