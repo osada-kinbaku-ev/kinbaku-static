@@ -62,4 +62,8 @@ h3 {
 .indent.v-list-item--variant-text .v-list-item__overlay {
   opacity: 0;
 }
+
+.v-toolbar-title__placeholder {
+  overflow: visible !important;
+}
 </style>
