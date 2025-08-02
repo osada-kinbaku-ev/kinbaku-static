@@ -34,12 +34,19 @@
       ></v-data-table>
     </p>
     <p class="text-center">
-      <v-btn 
+      <v-btn
         href="https://www.joyclub.de/party/veranstaltungen/4277291.kinbaku_dojo_berlin.html"
         color="primary"
         variant="outlined"
         size="large"
-      >Anmeldung</v-btn>
+      >Anmeldung über Joyclub</v-btn>
+      <v-btn
+        href="mailto:info@kinbaku-berlin.de?subject=Anmeldung Training&body=Bitte folgende Felder ausfüllen%0D%0A%0D%0AName(n): <bitte ausfüllen>%0D%0ADatum und Uhrzeit: <TT.MM.YYYY> um <HH:MM> Uhr ggf. und <HH:MM> Uhr%0D%0A%0D%0ABitte nicht ändern:%0D%0A%0D%0APersonen: 2%0D%0AKosten: 20 EUR%0D%0A%0D%0A"
+        color="primary"
+        variant="outlined"
+        size="large"
+        class="ml-3"
+      >Anmeldung per Email</v-btn>
     </p>
   </v-container>
   <v-container fluid class="m-0 p-0" style="background: #eee;">
