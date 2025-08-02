@@ -42,7 +42,7 @@ def template_email_register_event_admin(
         "\n\nKommentar:\n\n"
         + comment +
         "\n\nEvent details:\n\n"
-        + json.dumps(event, indent=4)
+        + json.dumps(event, indent=4, ensure_ascii=False)
     )
 
 
