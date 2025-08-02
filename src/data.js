@@ -12,8 +12,26 @@ export let events = [
     ];
 
 export let intro_times =  [
-    {date_string: '22 Mar 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688912.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-    {date_string: '12 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688913.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-    {date_string: '26 Apr 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688914.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
-    {date_string: '10 May 2025', time: '12.00 - 20.00', title: 'Einführungsworkshop', location: 'Kinbaku Dojo Binzstraße', audience: 'Einzelpersonen und Switcherpaare', href: 'https://www.joyclub.de/event/1688916.shibari_einfuehrungsworkshop_einzel_switcher_berli.html'},
+    {
+        date_string: '09 Aug 2025', time: '12.00 - 20.00',
+        title: 'Einführungsworkshop',
+        location: 'Kinbaku Dojo Binzstraße',
+        audience: 'Einzelpersonen und Switcherpaare',
+        action: 'Anmelden',
+        href: 'https://www.joyclub.de/event/1688919.shibari_einfuehrungsworkshop_einzel_switcher_berli.html',
+        fee_eur_per_person: 40.00,
+        people_min: 1,
+        people_max: 2,
+    },
+    {
+        date_string: '30 Aug 2025', time: '12.00 - 18.30',
+        title: 'Einführungsworkshop für Paare',
+        location: 'Kinbaku Dojo Binzstraße',
+        audience: 'Paare',
+        action: 'Als Paar anmelden',
+        href: 'https://www.joyclub.de/event/1688937.shibari_einfuehrungsworkshop_paare_berlin.html',
+        fee_eur_per_person: 32.50,
+        people_min: 2,
+        people_max: 2,
+    },
   ];

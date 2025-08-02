@@ -20,22 +20,27 @@ except FileNotFoundError:
 EVENT_ADMIN_EMAIL_ADDR = os.environ["KINBAKU_EVENT_ADMIN_EMAIL_ADDR"]
 
 
-def template_email_register_participant(event: dict) -> tuple[str, str]:
+def template_email_register_participant(people_num: int, event: dict) -> tuple[str, str]:
     title = event.get("title", "<kein Name>")
     return (
         f"Registrierung für {title} bestätigt",
         f"Hallo,\n"
-        f"vielen Dank für eine Anmeldung zu {event.get('title', '<kein Name>')}.",
+        f"vielen Dank für eine Anmeldung von {people_num} Person(en) zu {event.get('title', '<kein Name>')}.",
+        # Absageinformationen
     )
 
 
 def template_email_register_event_admin(
-    addr: str, name: str, event: dict
+    names: list[str], people_num: int, addr: str, comment: str, event: dict
 ) -> tuple[str, str]:
-    title = event.get("title", "<kein Name>")
+    event_str = event.get("title", "<kein Name>") + f" ({event.get('date_string', '')} {event.get('time', '')})"
     return (
-        f"Registrierung für {title}",
-        f"Hallo,\n" f"{name} <{addr}> hat sich soeben zu {title} angemeldet.\n",
+        f"Registrierung für {event_str}",
+        f"Hallo,\n"
+        f"{people_num} Person(en) haben sich mit der Adresse {addr} soeben zu {event_str} angemeldet. Namen:\n\n"
+        + names.join(', ') +
+        "\n\nKommentar:\n\n"
+        + comment
     )
 
 
@@ -51,9 +56,9 @@ def email(recp: str, subject: str, body: str) -> None:
     s.quit()
 
 
-def register(addr: str, name: str, event: dict) -> dict:
+def register(names: list[str], people_num: int, addr: str, comment: str, event: dict) -> dict:
     """
-    Register participant identified by `email` and `name` to the `event`.
+    Register `people_num` participant(s) identified by `email` and `names` to the `event`.
 
     Sends to emails:
     1. Email to event admin (environment config `EVENT_ADMIN_EMAIL_ADDR`)
@@ -61,16 +66,18 @@ def register(addr: str, name: str, event: dict) -> dict:
 
     If either fails, an exception is raised.
     """
-    if not name:
-        return dict(status="Name für Anmeldung benötigt.")
+    if people_num < 1 or people_num > 10:
+        return dict(status="Anzahl angemeldeter Personen inkorrekt.")
+    if len(names) < people_num or any(n == "" for n in names[:people_num]):
+        return dict(status="Alle Namen werden für die Anmeldung benötigt.")
     if not addr:
         return dict(status="Email-Adresse für Anmeldung benötigt.")
     if not event:
         return dict(status="Event-Information für Anmeldung benötigt.")
 
-    email(addr, *template_email_register_participant(event))
+    email(addr, *template_email_register_participant(people_num, event))
     email(
-        EVENT_ADMIN_EMAIL_ADDR, *template_email_register_event_admin(addr, name, event)
+        EVENT_ADMIN_EMAIL_ADDR, *template_email_register_event_admin(addr, names, people_num, comment, event)
     )
     return dict(status="success")
 
@@ -79,10 +86,13 @@ def process_request(query: str, post_data) -> dict:
     match query:
         case "anmeldung":
             post_data = post_data or {}
+            names = post_data.get("names", [])
+            people_num = post_data.get("people_num", 0)
             addr = post_data.get("addr")
-            name = post_data.get("name")
+            comment = post_data.get("comment")
             event = post_data.get("event", {})
-            return register(addr, name, event)
+
+            return register(names, people_num, addr, comment, event)
         case _:
             return dict(error=f"unknown query `{query}`")
 

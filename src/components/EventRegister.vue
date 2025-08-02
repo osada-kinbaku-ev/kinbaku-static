@@ -2,7 +2,7 @@
   <div class="text-center pa-4">
     <v-dialog v-model="dialog" transition="dialog-bottom-transition" :fullscreen="$vuetify.display.mobile" max-width="600">
       <template v-slot:activator="{ props: activatorProps }">
-        <v-btn fab dark small color="primary" variant="outlined" text="Anmelden" v-bind="activatorProps"></v-btn>
+        <v-btn fab dark small color="primary" variant="outlined" :text="event.action" v-bind="activatorProps"></v-btn>
       </template>
 
       <v-card>
@@ -16,14 +16,14 @@
             <b>Zeit:</b> {{ event.date }} {{ event.time }} <br/>
             <b>Ort:</b> {{ event.location }} <br/>
             <b>Zielgruppe:</b> {{ event.audience }} <br/>
-            <b>Gebühr:</b> {{ event.price }} <br/>
+            <b>Gebühr:</b> {{ event.fee }} <br/>
           </p>
           <p>
-            Für deine Anmeldung benötigen wir deinen Namen, den du beim Workshop verwenden möchtest, sowie eine Email-Adresse, 
+            Für deine Anmeldung benötigen wir deinen Namen, den du beim Workshop verwenden möchtest, sowie eine Email-Adresse,
             unter der du weitere Informationen zum Workshop empfangen kannst um deine Anmeldung zu bestätigen.
           </p>
         </v-card-text>
-        
+
         <v-divider v-if="step1"></v-divider>
 
         <v-card-text v-if="step1">
@@ -39,11 +39,25 @@
             </v-col>
 
             <v-col cols="12">
-              <v-text-field v-model="name" :disabled="loading" label="Name" required></v-text-field>
+              <v-btn-toggle
+                variant="outlined"
+                v-model="people_num"
+                divided
+              >
+                <v-btn v-for="num in Array.from(Array(event.people_max + 1).keys()).slice(event.people_min)" :value="num">{{ num }} Person{{ num > 1 ? 'en' : '' }}</v-btn>
+              </v-btn-toggle>
+            </v-col>
+
+            <v-col cols="12" v-for="idx in people_num">
+              <v-text-field v-model="names[idx-1]" :disabled="loading" :label="'Name ' + idx" required></v-text-field>
             </v-col>
 
             <v-col cols="12">
               <v-text-field v-model="email" :disabled="loading" label="Email Adresse" required></v-text-field>
+            </v-col>
+
+            <v-col cols="12">
+              <v-text-field v-model="comment" :disabled="loading" label="Kommentar"></v-text-field>
             </v-col>
           </v-row>
         </v-card-text>
@@ -54,7 +68,7 @@
           <v-spacer></v-spacer>
           <v-btn block size="large" color="primary" :loading="loading" text="Verbindlich Anmelden" variant="outlined" @click="register()"></v-btn>
         </v-card-actions>
-        
+
         <v-card-text v-if="step2">
           <p>
             <b>Zeit:</b> {{ event.date }} {{ event.time }} <br/>
@@ -91,8 +105,10 @@ export default {
     dialog: false,
     loading: false,
     response: {},
-    name: "",
+    names: [],
+    comment: "",
     email: "",
+    people_num: 1,
   }),
   props: [
     'event',
@@ -100,20 +116,24 @@ export default {
   methods: {
     register: async function() {
       // better use if (!this.$refs.form.validate()) instead of the following manual checks
-      if (this.name.length < 2) {
-        this.response = {status: 'Bitte gib einen Namen an.'}
-        return
+      for (let i = 0; i < this.people_num; i++) {
+        if (this.names[i].length == 0) {
+          this.response = {status: `Bitte gib alle Namen an. (${i})`}
+          return
+        }
       }
       if (!email_pattern.test(this.email || '')) {
         this.response = {status: 'Die Email-Adresse ist ungültig. Bitte überprüfe die eingegebene Adresse.'}
         return
       }
       let request = {
-        name: this.name,
+        names: this.names,
+        people_num: this.people_num,
         addr: this.email,
+        comment: this.comment,
         event: this.event,
       }
-      this.loading = true // TODO contact server
+      this.loading = true
 
       this.response = {}
       try {
@@ -123,6 +143,10 @@ export default {
       }
       this.loading = false;
     },
+  },
+  mounted: function() {
+    this.people_num = Math.max(Math.min(1, this.event.people_min), this.event.people_max)
+    this.names = Array(this.event.people_max).fill("")
   },
   computed: {
     step1: function() {

@@ -4,41 +4,88 @@
       cover
       max-height="240px"
       src="@/assets/dojo.jpg"
-    ></v-img> 
+    ></v-img>
   </v-card>
   <v-container>
     <h1 class="text-center mb-1">Einführungsworkshops</h1>
     <p class="mt-3 text-center">
-      Die Einführungsveranstaltung dient als Grundlage für den <router-link to="training">Unterricht im Kinbaku Dojo Berlin</router-link>, kann aber auch eigenständig als Workshop für Fesselinteressierte wahrgenommen werden. Durch die Einführungsveranstaltung wollen wir sicherstellen, dass alle, die bei uns unterrichtet werden, über sicherheitsrelevante Aspekte informiert sind, aber auch vereinsinterne Regelungen kennen. Dies nimmt vorab etwas Zeit in Anspruch. Daher gliedern wir die Einführungsveranstaltung vom regulären Training ab. Die Einführungsveranstaltung ist die Voraussetzung, um an unserem Training für die Grundstufe teilnehmen zu können.
+      Die Einführungsveranstaltung dient als Grundlage für den <router-link to="training">Unterricht im Kinbaku Dojo Berlin</router-link>, kann aber auch als Schnupperkurs für fesselinteressierte wahrgenommen werden. Durch die Einführungsveranstaltung wollen wir sicherstellen, dass alle, die bei uns unterrichtet werden, über z.B.: sicherheitsrelevante Aspekte Informiert sind, aber auch vereinsinterne Regelungen kennen. Dies nimmt vorab etwas Zeit in Anspruch. Daher gliedern wir die Einführungsveranstaltung vom regulären Training ab. Die Einführungsveranstaltung ist die Voraussetzung um bei unserem Grundstufen Training teilnehmen zu können.
     </p>
 
     <p class="mt-3 text-center">
-      Die Einführungsveranstaltung wird überwiegend frontal unterrichtet und unterscheidet sich daher sehr vom üblichen Trainingskonzept. Wir nehmen uns also etwas mehr Zeit - wir machen kurze Pausen - bringt Euch also gern einen Snack mit.
+      Die Einführungsveranstaltung wird überwiegend frontal unterrichtet und unterscheidet sich daher vom üblichen Trainingskonzept. Wir nehmen uns etwas mehr Zeit - wir machen kurze Pausen - bringt euch gern einen Snack mit.
     </p>
 
-    <v-timeline align="start" class="mt-4" side="end">
-      <v-timeline-item
-        v-for="(item, i) in items"
-        :key="i"
-        fill-dot
-      >
-        <v-card>
-          <v-card-title :class="['text-h6', `bg-${item.color}`]">
-            {{ item.title }}
-          </v-card-title>
-          <v-card-text class="bg-white text--primary">
-            <p>{{ item.text }}</p>
-          </v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
+    <p class="mt-3 text-center">
+      Die Einführungsveranstaltung wird in zwei Varianten angeboten.
+    </p>
+
+    <v-row>
+      <v-col md="6" sm="12">
+        <h2>Für Paare, die nicht switchen wollen</h2>
+        <p>
+          Anmeldung zu zweit mit fester Rollenverteilung während des Workshops, denn durch die relativ kurze Dauer des Workshops besteht keine Möglichkeit zu switchen.
+        </p>
+        <p>
+          Der Workshop gliedert sich in einen Theorie- und einen Praxisteil. Der Theorieteil nimmt etwa zwei Stunden in Anspruch. Inhalte des Workshops:
+        </p>
+
+        <h3>Inhalte</h3>
+        <ul>
+          <li>Sicherheit und Consent</li>
+          <li>Materialkunde</li>
+          <li>Vereinsinfos und Trainingstermine</li>
+          <li>Praxis: Single-column-tie</li>
+          <li>Praxis: Double-column-tie</li>
+          <li>Praxis: Strappado</li>
+          <li>Einführung Fesselintensionen</li>
+        </ul>
+
+        <h3>Zielgruppe</h3>
+        <p>
+          Paare von zwei Personen (romantisch, itim oder nicht) mit für den Workshop festgelegter Rollenverteilung, die Fesseln ausprobieren möchten oder am Training teilnehmen möchten.
+        </p>
+      </v-col>
+
+      <v-col md="6" sm="12">
+        <h2>Für alle anderen</h2>
+        <p>
+          Anmeldung einzeln für alle die fesseln lernen möchten. Wenn ihr euch anmeldet, solltet ihr grundsätzlich bereit sein zu switchen (und beide Rollen einzunehmen) und Partnerübungen mit anderen aus der Gruppe durchzuführen.
+        </p>
+        <p>
+          Der Workshop gliedert sich in einen Theorie- und einen Praxisteil. Der Theorieteil nimmt etwa zwei Stunden in Anspruch. Inhalte des Workshops:
+        </p>
+
+        <h3>Inhalte</h3>
+        <ul>
+          <li>Sicherheit und Consent</li>
+          <li>Materialkunde</li>
+          <li>Vereinsinfos und Trainingstermine</li>
+          <li>Praxis: erste Knoten (einzeln)</li>
+          <li>Kennenlernen und Consent</li>
+          <li>Praxis: Single-column-tie (mit Partner)</li>
+          <li>Praxis: Double-column-tie (mit Partner)</li>
+          <li>Praxis: Strappado (mit Partner)</li>
+        </ul>
+
+        <h3>Zielgruppe</h3>
+        <ul>
+          <li>Fesselinteressierte Personen (ohne Vorkenntnisse)</li>
+          <li>Personen (mit oder ohne Vorkenntnisse), die an unserem wöchentlichen Training teilnehmen möchten</li>
+          <li>Paare die untereinander switchen wollen, aber nicht mit anderen Teilnehmern</li>
+          <li>Paare die switchen wollen und gerne Übungen mit anderen Teilnehmern ausprobieren</li>
+          <li>Paare die nicht switchen wollen, sich aber über die zusätzliche Übungszeit freuen</li>
+        </ul>
+      </v-col>
+    </v-row>
+
   </v-container>
   <v-container class="m-0 p-0" fluid style="background: #eee;">
     <v-container>
       <h1 class="text-center mb-5">Termine</h1>
       <p class="text-center">
-        <v-data-table 
-          style="background: transparent;" 
+        <v-data-table
+          style="background: transparent;"
           class="text-center"
           :items="intro_times"
           :headers="intro_headers"
@@ -47,7 +94,7 @@
         >
           <template v-slot:item.controls="props">
             <EventRegister :event="props.item"></EventRegister>
-          </template>    
+          </template>
         </v-data-table>
       </p>
     </v-container>
@@ -70,7 +117,7 @@
           </v-card-text>
 
         </v-card>
-      </v-col>  
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -111,10 +158,10 @@ export default {
     for (const d of this.intro_times) {
       d.date = new Date(Date.parse(d.date_string)).toLocaleDateString("de-DE", date_locale_options)
     }
-  },  
+  },
   computed: {
     intro_headers: function () {
-      return this.$vuetify.display.mobile ? 
+      return this.$vuetify.display.mobile ?
       [
         {value: "date"},
         {value: "time"},
