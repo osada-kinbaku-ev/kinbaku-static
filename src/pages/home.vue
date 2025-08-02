@@ -1,28 +1,28 @@
 <template>
   <v-card tile elevation="16">
-    <video-background 
+    <video-background
       :src="video"
-      style="max-height: 400px; height: 100vh;"
+      style="height: 70vh;"
       >
       <v-container>
         <div class="px-10" style="color: white;">
           <h1 style="color: white; font-size: 50px; margin-top: 20px">Shibari lernen</h1>
           <strong>Das Osada Kinbaku Dojo Berlin unterrichtet Shibari an fünf wöchtenlichen Terminen und veranstaltet Workshops sowie Events.</strong>
           <p class="mt-15">
-            <v-btn 
+            <v-btn
               class="mr-5 mb-5"
-              variant="outlined" 
+              variant="outlined"
               to="intro"
               append-icon="mdi-chevron-right">
               Einführungsveranstaltung
             </v-btn>
-            <v-btn 
+            <v-btn
               class="mb-5"
-              variant="outlined" 
+              variant="outlined"
               to="training"
               append-icon="mdi-chevron-right">
               Training
-            </v-btn>            
+            </v-btn>
           </p>
         </div>
       </v-container>
@@ -79,7 +79,7 @@
             ></v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>  
+      </v-col>
     </v-row>
   </v-container>
 
