@@ -43,7 +43,7 @@
 
         <h3>Zielgruppe</h3>
         <p>
-          Paare von zwei Personen (romantisch, itim oder nicht) mit für den Workshop festgelegter Rollenverteilung, die Fesseln ausprobieren möchten oder am Training teilnehmen möchten.
+          Paare von zwei Personen (romantisch, intim oder nicht) mit für den Workshop festgelegter Rollenverteilung, die Fesseln ausprobieren möchten oder am Training teilnehmen möchten.
         </p>
       </v-col>
 
