@@ -16,7 +16,7 @@
             <b>Zeit:</b> {{ event.date }} {{ event.time }} <br/>
             <b>Ort:</b> {{ event.location }} <br/>
             <b>Zielgruppe:</b> {{ event.audience }} <br/>
-            <b>Gebühr:</b> {{ event.fee }} <br/>
+            <b>Gebühr:</b> {{ event.fee_eur_per_person * people_num }} EUR <br/>
           </p>
           <p>
             Für deine Anmeldung benötigen wir deinen Namen, den du beim Workshop verwenden möchtest, sowie eine Email-Adresse,
