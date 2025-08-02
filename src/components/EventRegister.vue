@@ -43,6 +43,7 @@
                 variant="outlined"
                 v-model="people_num"
                 divided
+                mandatory
               >
                 <v-btn v-for="num in Array.from(Array(event.people_max + 1).keys()).slice(event.people_min)" :value="num">{{ num }} Person{{ num > 1 ? 'en' : '' }}</v-btn>
               </v-btn-toggle>
