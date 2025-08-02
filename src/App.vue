@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar>
       <template v-slot:prepend>
-        <v-app-bar-nav-icon v-if="$vuetify.display.mobile" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>    
+        <v-app-bar-nav-icon v-if="$vuetify.display.mobile" variant="text" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       </template>
       <v-toolbar-title style="cursor: pointer" @click="$router.push('home')" >Osada Kinbaku Dojo e.V.</v-toolbar-title>
 
@@ -17,7 +17,7 @@
         temporary
       >
       <v-list-item v-for="label, to in menu" v-bind:key="label" :to="to" :title="label"></v-list-item>
-    </v-navigation-drawer>    
+    </v-navigation-drawer>
 
     <router-view />
   </v-app>
