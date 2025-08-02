@@ -7,9 +7,23 @@
     ></v-img> 
   </v-card>
   <v-container>
+    <p class="mt-3 text-center">
+      Das Kinbaku Dojo Berlin lehrt die japanischen Fesselkünste Shibari (縛り, Festbinden, Fesseln) / Kinbaku (緊縛, straffes Festbinden) nach Osada-ryu (長田流).
+    </p>
+    <p class="mt-3 text-center">
+        Der Eingetragene Verein besteht bereits seit 2010 und war das erste Dojo Europas dieser Art.
+        Unser Training zielt darauf ab, das Handwerk hinter der Kunst zu verinnerlichen.
+        Dafür bieten wir eine sehr hohe Regelmäßigkeit an Trainings pro Woche,
+        welche unter Aufsicht von erfahrenen Trainern und Trainerinnen stattfinden und individuell besucht werden können.
+    </p>
+    <p class="mt-3 text-center">
+        Wir sind davon überzeugt, dass niemand Shibari an einem Tag lernt.
+        Bis man Handgriffe flüssig und sicher reproduzieren kann, werden Wiederholung benötigt und Fehler,
+        welche sich manchmal unbemerkt mit der Zeit einschleichen sollten regelmäßig korrigiert werden.
+    </p>
     <h1 class="text-center mb-1">Trainingstermine</h1>
     <p class="mt-3 text-center">
-      Bevor du beim Training fesseln kannst, musst du einen 
+      Bevor du beim Training fesseln kannst, musst du einen
       <router-link to="intro">Einführungsworkshop</router-link> besuchen.
     </p>
     <p class="my-8">
@@ -70,7 +84,7 @@
             </v-card-text>
 
           </v-card>
-        </v-col>  
+        </v-col>
       </v-row>
     </v-container>
   </v-container>
@@ -92,7 +106,7 @@
           </v-card-text>
 
         </v-card>
-      </v-col>  
+      </v-col>
     </v-row>
   </v-container>
 </template>
