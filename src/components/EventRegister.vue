@@ -145,7 +145,7 @@ export default {
     },
   },
   mounted: function() {
-    this.people_num = Math.max(Math.min(1, this.event.people_min), this.event.people_max)
+    this.people_num = Math.min(Math.max(1, this.event.people_min), this.event.people_max)
     this.names = Array(this.event.people_max).fill("")
   },
   computed: {
