@@ -38,7 +38,7 @@ def template_email_register_event_admin(
         f"Registrierung für {event_str}",
         f"Hallo,\n"
         f"{people_num} Person(en) haben sich mit der Adresse {addr} soeben zu {event_str} angemeldet. Namen:\n\n"
-        + names.join(', ') +
+        + ", ".join(names) +
         "\n\nKommentar:\n\n"
         + comment +
         "\n\nEvent details:\n\n"
