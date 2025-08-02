@@ -22,6 +22,12 @@
             Für deine Anmeldung benötigen wir deinen Namen, den du beim Workshop verwenden möchtest, sowie eine Email-Adresse,
             unter der du weitere Informationen zum Workshop empfangen kannst um deine Anmeldung zu bestätigen.
           </p>
+          <p>
+            Um Euch Kosten zu ersparen, versuchen wir, die frei werdenden Plätze aufzufüllen.
+            Die Workshops finden in Mieträumen statt.
+            Daher bitten wir um Euer Verständnis, dass wir bei kurzfristiger Absage keine Rückerstattung ermöglichen können.
+            Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein.
+          </p>
         </v-card-text>
 
         <v-divider v-if="step1"></v-divider>
