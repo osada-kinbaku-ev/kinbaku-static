@@ -79,7 +79,7 @@
           <v-alert
             class="mb-5"
             density="compact"
-            text="Du bist angemeldet! Wir haben dir eine Email mit den organisatorischen Details gesendet."
+            text="Du bist auf der Warteliste! Wir melden uns bei dir mit den organisatorischen Details gesendet."
             title="Wir freuen uns auf dich"
             type="success"
           ></v-alert>
