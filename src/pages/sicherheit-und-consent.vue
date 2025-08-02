@@ -4,7 +4,29 @@
     max-height="240px"
     src="@/assets/dojo.jpg"
     class="mb-4"
-  ></v-img>      
+  ></v-img>
+
+  <v-container>
+    <h1 class="text-center mb-1">Vor dem Besuch</h1>
+    <v-row>
+      <v-col cols="12" md="4" v-for="byg, idx in before_you_go">
+        <v-card
+          v-bind:key="idx"
+          class="mx-auto my-3"
+        >
+
+          <v-card-item>
+            <v-card-title>{{ byg.title }}</v-card-title>
+          </v-card-item>
+
+          <v-card-text>
+            {{ byg.text }}
+          </v-card-text>
+
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
 
   <v-container>
     <h2 id="sicherheit">Sicherheit</h2>
@@ -109,5 +131,13 @@
   </v-container>
 </template>
 
-<script></script>
+<script>
+import {before_you_go} from '@/data'
+
+export default {
+  data: () => ({
+    before_you_go
+  })
+}
+</script>
 

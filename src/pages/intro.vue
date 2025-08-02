@@ -109,27 +109,7 @@
       </v-col>
     </v-row>
   </v-container>
-  <v-container class="m-0 p-0" fluid style="background: #eee;">
-    <h1 class="text-center mb-1">Vor dem Besuch</h1>
-    <v-row>
-      <v-col cols="12" md="4" v-for="byg, idx in before_you_go">
-        <v-card
-          v-bind:key="idx"
-          class="mx-auto my-3"
-        >
 
-          <v-card-item>
-            <v-card-title>{{ byg.title }}</v-card-title>
-          </v-card-item>
-
-          <v-card-text>
-            {{ byg.text }}
-          </v-card-text>
-
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
 </template>
 
 <script>
@@ -140,13 +120,6 @@ import { useDisplay } from 'vuetify'
 export default {
   data: () => ({
     intro_times: intro_times,
-    before_you_go: [
-      {title: 'Atmosphäre', text: 'Die Einführungsworkshops sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.'},
-      {title: 'Vorkenntnisse', text: 'Der Einführungsworkshop benötigt keine Vorkenntnisse. Auch Personen mit Vorkenntnissen sind willkommen!'},
-      {title: 'Bekleidung', text: 'Wir bitten Euch, auf Straßenkleidung zu verzichten. Kommt in bequemer sportlicher Kleidung, idealerweise enganliegend. T-Shirt und Hose sind gut geeignet.'},
-      {title: 'Seile', text: 'Ihr könnt Seile von uns leihen. Wir fesseln ausschließlich mit Juteseilen (oder Hanfseilen). Diese müssen jedoch vorher aufwändig bearbeitet werden. Es ist sinnvoll, dass Ihr verschiedene Seile in die Hand nehmt, bevor Ihr eine Kaufentscheidung trefft. Im Training könnt Ihr viele verschiedene Seiltypen sehen und andere Lernende fragen, ob Ihr deren Seile einmal ausprobieren könnt. Verschiedene Personen haben unterschiedliche Vorlieben, was das richtige Seil betrifft und können Euch Tipps geben. '},
-      {title: 'Absage', text: 'Um Euch Kosten zu ersparen, versuchen wir, die frei werdenden Plätze aufzufüllen. Trainings finden in Mieträumen statt. Daher bitten wir um Euer Verständnis, dass wir bei kurzfristiger Absage keine Rückerstattung ermöglichen können. Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein. '},
-    ],
     items: [
       {title: 'Sicherheit und Consent', text: 'Ein respektvolles Miteinander und gegenseitige Zustimmung sind essentiell für unsere Trainingskultur.'},
       {title: 'Materialkunde', text: 'Zuerst'},
