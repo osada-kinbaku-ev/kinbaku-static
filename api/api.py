@@ -21,12 +21,11 @@ EVENT_ADMIN_EMAIL_ADDR = os.environ["KINBAKU_EVENT_ADMIN_EMAIL_ADDR"]
 
 
 def template_email_register_participant(people_num: int, event: dict) -> tuple[str, str]:
-    title = event.get("title", "<kein Name>")
     event_str = event.get("title", "<kein Name>") + f" ({event.get('date_string', '')} {event.get('time', '')})"
     return (
-        f"Registrierung für {title} bestätigt",
+        f"Registrierung für {event_str} bestätigt",
         f"Hallo,\n"
-        f"vielen Dank für deine Anmeldung von {people_num} Person(en) zu {event_str}.",
+        f"vielen Dank für deine Anmeldung von {people_num} Person(en) zu {event_str}."
         f"\n\n"
         f"Um Euch Kosten zu ersparen, versuchen wir, die frei werdenden Plätze aufzufüllen. "
         f"Die Workshops finden in Mieträumen statt. "
