@@ -28,9 +28,18 @@
           :headers="intro_headers"
           hide-default-header
           hide-default-footer
+          :expanded="Array.from(Array(intro_times.length))"
         >
           <template v-slot:item.controls="props">
             <EventRegister :event="props.item"></EventRegister>
+          </template>
+          <template v-slot:expanded-row="{columns, item}">
+            <tr v-if="mobile" class="extension mt-0">
+              <td :colspan="columns.length" class="pt-0 pb-0">{{ item.audience }}</td>
+            </tr>
+            <tr v-if="mobile" class="extension mt-0">
+                <td :colspan="columns.length" class="pt-0 pb-2"><EventRegister :event="item"></EventRegister></td>
+            </tr>
           </template>
         </v-data-table>
       </p>
@@ -126,6 +135,7 @@
 <script>
 import EventRegister from '@/components/EventRegister.vue';
 import {intro_times} from '@/data'
+import { useDisplay } from 'vuetify'
 
 export default {
   data: () => ({
@@ -145,7 +155,8 @@ export default {
       {title: 'Prüfungssystem', text: 'Zuerst'},
       {title: 'Praxis: Single Column Tie', text: 'Ihr lernt Elemente der ersten Stufe (Kyu9) in unserem Schulsystem kennen. Wir empfehlen diese Techniken in unseren Trainingsstunden zu vertiefen.'},
       {title: 'Demo', text: 'Kurze Demo, wie man die gelernten Elemente einsetzten könnte.'},
-    ]
+    ],
+    mobile: useDisplay({ mobileBreakpoint: 700 }).mobile,
   }),
   components: {
   },
@@ -162,12 +173,11 @@ export default {
   },
   computed: {
     intro_headers: function () {
-      return this.$vuetify.display.mobile ?
+      return this.mobile ?
       [
         {value: "date"},
         {value: "time"},
         {value: "location"},
-        {value: "controls"},
       ] :
       [
         {value: "date"},
@@ -180,3 +190,9 @@ export default {
   },
 }
 </script>
+
+<style lang="css">
+.v-table .v-table__wrapper > table > tbody > tr:not(:last-child):has(+tr.extension) > td {
+  border-bottom: none;
+}
+</style>
