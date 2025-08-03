@@ -4,7 +4,18 @@
     max-height="240px"
     src="@/assets/dojo.jpg"
     class="mb-4"
-  ></v-img>      
+  ></v-img>
+
+  <v-container v-if="events.length == 0">
+    <h1>Keine Events geplant! 😭</h1>
+    <v-btn
+        href="https://www.joyclub.de/party/veranstaltungen/4277291.kinbaku_dojo_berlin.html"
+        color="primary"
+        variant="outlined"
+        size="large"
+        class="mb-3"
+      >Bei Joyclub nach Osada Kinbaku Dojo e.V. Events suchen</v-btn>
+  </v-container>
 
   <v-container>
     <v-row>
@@ -56,7 +67,7 @@
             ></v-btn>
           </v-card-actions>
         </v-card>
-      </v-col>  
+      </v-col>
     </v-row>
 </v-container>
 </template>
