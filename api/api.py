@@ -31,6 +31,13 @@ def template_email_register_participant(people_num: int, event: dict) -> tuple[s
         f"Die Workshops finden in Mieträumen statt. "
         f"Daher bitten wir um Euer Verständnis, dass wir bei kurzfristiger Absage keine Rückerstattung ermöglichen können. "
         f"Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein. "
+        f"\n"
+        f"Dein Team vom Osada Kinbaku Dojo\n\n"
+        f"--\n"
+        f"Osada Kinbaku Dojo e.V. · Binzstraße 64 · 13189 Berlin-Pankow\n"
+        f"\n"
+        f"Vorstandsvorsitz: Alexander Esser\n"
+        f"Registergericht: AG Berlin (Charlottenburg) VR 29488 B\n"
     )
 
 
