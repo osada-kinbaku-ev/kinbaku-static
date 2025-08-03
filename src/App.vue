@@ -32,7 +32,7 @@
         training: "Training",
         intro: "Einführungsveranstaltung",
         events: "Events",
-        "sicherheit-und-consent": "Sicherheit & Consent",
+        vereinsregeln: "Vereinsregeln",
         galerie: "Galerie",
       }
     }),

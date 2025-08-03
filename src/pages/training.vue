@@ -4,7 +4,7 @@
       cover
       max-height="240px"
       src="@/assets/dojo.jpg"
-    ></v-img> 
+    ></v-img>
   </v-card>
   <v-container>
     <p class="mt-3 text-center">
@@ -21,13 +21,16 @@
         Bis man Handgriffe flüssig und sicher reproduzieren kann, werden Wiederholung benötigt und Fehler,
         welche sich manchmal unbemerkt mit der Zeit einschleichen sollten regelmäßig korrigiert werden.
     </p>
+  </v-container>
+  <v-container fluid class="m-0 p-0" style="background: #eee;">
     <h1 class="text-center mb-1">Trainingstermine</h1>
     <p class="mt-3 text-center">
       Bevor du beim Training fesseln kannst, musst du einen
-      <router-link to="intro">Einführungsworkshop</router-link> besuchen.
+      <router-link to="intro">Einführungsworkshop</router-link> besuchen. Alle Teilnehmer müssen die <router-link to="vereinsregeln">Vereinsregeln</router-link> kennen.
     </p>
     <p class="my-8">
       <v-data-table class="text-center"
+        style="background: transparent;"
         :items="training_times"
         hide-default-header
         hide-default-footer
@@ -39,17 +42,18 @@
         color="primary"
         variant="outlined"
         size="large"
+        class="mb-3"
       >Anmeldung über Joyclub</v-btn>
       <v-btn
         href="mailto:info@kinbaku-berlin.de?subject=Anmeldung Training&body=Bitte folgende Felder ausfüllen%0D%0A%0D%0AName(n): <bitte ausfüllen>%0D%0ADatum und Uhrzeit: <TT.MM.YYYY> um <HH:MM> Uhr ggf. und <HH:MM> Uhr%0D%0A%0D%0ABitte nicht ändern:%0D%0A%0D%0APersonen: 2%0D%0AKosten: 20 EUR%0D%0A%0D%0A"
         color="primary"
         variant="outlined"
         size="large"
-        class="ml-3"
+        class="ml-3 mb-3"
       >Anmeldung per Email</v-btn>
     </p>
   </v-container>
-  <v-container fluid class="m-0 p-0" style="background: #eee;">
+  <!-- <v-container fluid class="m-0 p-0" style="background: #eee;">
     <v-container>
       <h1 class="text-center mb-1">Trainingsinhalte</h1>
       <v-row>
@@ -94,28 +98,7 @@
         </v-col>
       </v-row>
     </v-container>
-  </v-container>
-  <v-container>
-    <h1 class="text-center mb-1">Vor dem ersten Besuch</h1>
-    <v-row>
-      <v-col cols="12" md="4" v-for="byg, idx in before_you_go">
-        <v-card
-          v-bind:key="idx"
-          class="mx-auto my-3"
-        >
-
-          <v-card-item>
-            <v-card-title>{{ byg.title }}</v-card-title>
-          </v-card-item>
-
-          <v-card-text>
-            {{ byg.text }}
-          </v-card-text>
-
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+  </v-container> -->
 </template>
 
 <script>
@@ -143,14 +126,6 @@ export default {
       {day: 'mittwochs', time: '20.00 - 21.30', location: 'Neukölln'},
       {day: 'donnerstags', time: '18.00 - 21.30', location: 'Pankow'},
     ],
-    before_you_go: [
-      {title: 'Atmosphäre', text: 'Unsere Trainings sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.'},
-      {title: 'Vorkenntnisse', text: 'Bevor du beim Training fesseln kannst, musst du den Einführungsworkshop besuchen.  Begleitet Ihr jemanden zum Training als zu fesselnde Person, müsst Ihr den Einführungs-Workshop selbst nicht besucht haben. Andere Vorkenntnisse werden vorausgesetzt.'},
-      {title: 'Bekleidung', text: 'Daher trainieren wir in sportlicher Kleidung ohne Schuhe. Trainiert wird barfuß oder in Socken. Wir bitten Euch, auf Straßenkleidung zu verzichten. Kommt in bequemer sportlicher Kleidung, idealerweise enganliegend. T-Shirt und Hose sind gut geeignet.'},
-      {title: 'Individuelles Lernen', text: 'Es ist Gruppenunterricht, aber alle lernen in ihrem eigenen Tempo. Unterschiedliche Level trainieren nebeneinander. Unsere Trainerinnen und Trainer korrigieren im direkten Kontakt, geben Tipps zu Technik und Körperhaltung und wiederholen die Elemente mit Euch oder zeigen den nächsten Schritt.'},
-      {title: 'Seile', text: 'Ihr könnt anfangs Seile von uns leihen. Wir fesseln ausschließlich mit Juteseilen (oder Hanfseilen). Diese müssen jedoch vorher aufwändig bearbeitet werden. Es ist sinnvoll, dass Ihr verschiedene Seile in die Hand nehmt, bevor Ihr eine Kaufentscheidung trefft. Im Training könnt Ihr viele verschiedene Seiltypen sehen und andere Lernende fragen, ob Ihr deren Seile einmal ausprobieren könnt. Verschiedene Personen haben unterschiedliche Vorlieben, was das richtige Seil betrifft und können Euch Tipps geben. '},
-      {title: 'Absage', text: 'Um Euch Kosten zu ersparen, versuchen wir, die frei werdenden Plätze aufzufüllen. Trainings finden in Mieträumen statt. Daher bitten wir um Euer Verständnis, dass wir bei kurzfristiger Absage keine Rückerstattung ermöglichen können. Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein. '},
-    ]
   }),
   components: {
     VideoBackground,

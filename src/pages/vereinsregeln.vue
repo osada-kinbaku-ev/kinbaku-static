@@ -7,29 +7,53 @@
   ></v-img>
 
   <v-container>
-    <h1 class="text-center mb-1">Vor dem Besuch</h1>
-    <v-row>
-      <v-col cols="12" md="4" v-for="byg, idx in before_you_go">
-        <v-card
-          v-bind:key="idx"
-          class="mx-auto my-3"
-        >
+    <h1 id="consent-training" class="text-center">Trainingskultur</h1>
+    <p>
+      Ein respektvolles Miteinander und gegenseitige Zustimmung sind essentiell für unsere Trainingskultur.
+    </p>
+    <p>
+      Unsere Trainerinnen und Trainer sagen die übungen an und überprüfen diese, wobei es gelegentlich notwendig sein kann, die gefesselte Person zu berühren, um die Sicherheit und Effektivität der übung sicherzustellen.
+    </p>
+    <p>
+      Wenn aus irgendeinem Grund eine übung nicht durchgeführt werden kann, sei es aufgrund einer akuten Verletzung oder aus anderen Gründen, ist es die Verantwortung der Trainierenden, dies den Trainerinnen und Trainern mitzuteilen.
+    </p>
+    <p>
+      Die fesselnde Person übernimmt die Verantwortung, ihre übungspartner:innen vor dem Training über den Ablauf aufzuklären. Sofern es vor dem Training von Euch nicht anders kommuniziert wird, gehen unsere Trainerinnen und Trainer davon aus, dass die gefesselte Person zu Korrekturzwecken von ihnen berührt werden darf.
+    </p>
+    <p>
+      Die gefesselte Person ermöglicht der fesselnden Person das Training. Daher ist es am Ende eines Trainings üblich, dass sich die fesselnde Person bei der gefesselten Person bedankt.
+    </p>
+    <p>
+      Es ist uns wichtig, dass Ihr diese Grundsätze auch wechselnden Trainingspartner:innen kommuniziert.
+      Ihr könnt neuen Trainingspartner:innen zum Beispiel diese Seite empfehlen.
+    </p>
 
-          <v-card-item>
-            <v-card-title>{{ byg.title }}</v-card-title>
-          </v-card-item>
-
-          <v-card-text>
-            {{ byg.text }}
-          </v-card-text>
-
-        </v-card>
-      </v-col>
-    </v-row>
   </v-container>
+  <v-container fluid class="m-0 p-0" style="background: #eee;">
+    <v-container>
+      <h1 class="text-center mb-1">Vor dem ersten Besuch</h1>
+      <v-row>
+        <v-col cols="12" md="4" v-for="byg, idx in before_you_go">
+          <v-card
+            v-bind:key="idx"
+            class="mx-auto my-3"
+          >
 
+            <v-card-item>
+              <v-card-title>{{ byg.title }}</v-card-title>
+            </v-card-item>
+
+            <v-card-text>
+              {{ byg.text }}
+            </v-card-text>
+
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
+  </v-container>
   <v-container>
-    <h2 id="sicherheit">Sicherheit</h2>
+    <h1 id="sicherheit" class="text-center">Sicherheit</h1>
 
     <p>
       Shibari kann physische und emotionale Risiken mit sich bringen, insbesondere wenn es falsch durchgeführt wird oder wenn die Beteiligten keine Erfahrung haben. Es ist daher von größter Bedeutung, dass Sicherheitsprotokolle und -techniken beachtet werden, um Verletzungen oder Schäden zu vermeiden und die entsprechenden Risiken zu beherrschen und zu minimieren.
@@ -78,7 +102,7 @@
       <v-col class="d-flex child-flex" cols="4"><v-img src="@/assets/strappado4.jpg" aspect-ratio="1" cover></v-img></v-col>
     </v-row>
 
-    <h2 id="consent">Consent</h2>
+    <h1 id="consent" class="text-center">Consent</h1>
 
     <p>
       Es ist wichtig, dass Zustimmung jederzeit freiwillig und bewusst von allen erteilt wird, und dass die Grenzen und Wünsche aller Beteiligten respektiert werden. Im Osada Kinbaku Dojo e.V. messen wir dem Consent einen großen Wert zu, um eine sichere und positive Erfahrung für alle Beteiligten zu gewährleisten.
@@ -108,26 +132,6 @@
       Und auch wenn dies in der Umkehrung nicht auf aktiv fesselnde Personen zutrifft, sind dennoch auch deren Grenzen klar zu beachten.
     </p>
 
-    <h2 id="consent-training">Der Consent im Training / Unsere Trainingskultur</h2>
-    <p>
-      Ein respektvolles Miteinander und gegenseitige Zustimmung sind essentiell für unsere Trainingskultur.
-    </p>
-    <p>
-      Unsere Trainerinnen und Trainer sagen die übungen an und überprüfen diese, wobei es gelegentlich notwendig sein kann, die gefesselte Person zu berühren, um die Sicherheit und Effektivität der übung sicherzustellen.
-    </p>
-    <p>
-      Wenn aus irgendeinem Grund eine übung nicht durchgeführt werden kann, sei es aufgrund einer akuten Verletzung oder aus anderen Gründen, ist es die Verantwortung der Trainierenden, dies den Trainerinnen und Trainern mitzuteilen.
-    </p>
-    <p>
-      Die fesselnde Person übernimmt die Verantwortung, ihre übungspartner:innen vor dem Training über den Ablauf aufzuklären. Sofern es vor dem Training von Euch nicht anders kommuniziert wird, gehen unsere Trainerinnen und Trainer davon aus, dass die gefesselte Person zu Korrekturzwecken von ihnen berührt werden darf.
-    </p>
-    <p>
-      Die gefesselte Person ermöglicht der fesselnden Person das Training. Daher ist es am Ende eines Trainings üblich, dass sich die fesselnde Person bei der gefesselten Person bedankt.
-    </p>
-    <p>
-      Es ist uns wichtig, dass Ihr diese Grundsätze auch wechselnden Trainingspartner:innen kommuniziert.
-      Ihr könnt neuen Trainingspartner:innen zum Beispiel diese Seite empfehlen.
-    </p>
   </v-container>
 </template>
 
@@ -136,7 +140,7 @@ import {before_you_go} from '@/data'
 
 export default {
   data: () => ({
-    before_you_go
+    before_you_go,
   })
 }
 </script>
