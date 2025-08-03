@@ -24,13 +24,13 @@ def template_email_register_participant(people_num: int, event: dict) -> tuple[s
     event_str = event.get("title", "<kein Name>") + f" ({event.get('date_string', '')} {event.get('time', '')})"
     return (
         f"Registrierung für {event_str} bestätigt",
-        f"Hallo,\n"
+        f"Hallo,\n\n"
         f"vielen Dank für deine Anmeldung von {people_num} Person(en) zu {event_str}."
         f"\n\n"
         f"Um Euch Kosten zu ersparen, versuchen wir, die frei werdenden Plätze aufzufüllen. "
         f"Die Workshops finden in Mieträumen statt. "
         f"Daher bitten wir um Euer Verständnis, dass wir bei kurzfristiger Absage keine Rückerstattung ermöglichen können. "
-        f"Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein. "
+        f"Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein.\n"
         f"\n"
         f"Dein Team vom Osada Kinbaku Dojo\n\n"
         f"--\n"
