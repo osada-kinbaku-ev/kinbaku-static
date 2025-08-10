@@ -125,7 +125,7 @@ export default {
       // better use if (!this.$refs.form.validate()) instead of the following manual checks
       for (let i = 0; i < this.people_num; i++) {
         if (this.names[i].length == 0) {
-          this.response = {status: `Bitte gib alle Namen an. (${i})`}
+          this.response = {status: `Bitte gib alle Namen an.`}
           return
         }
       }
