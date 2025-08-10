@@ -56,15 +56,15 @@
             </v-col>
 
             <v-col cols="12" v-for="idx in people_num">
-              <v-text-field v-model="names[idx-1]" :disabled="loading" :label="'Name ' + idx" required></v-text-field>
+              <v-text-field v-model="names[idx-1]" :disabled="loading" :label="'Name ' + idx + '*'" required></v-text-field>
             </v-col>
 
             <v-col cols="12">
-              <v-text-field v-model="email" :disabled="loading" label="Email Adresse" required></v-text-field>
+              <v-text-field v-model="email" :disabled="loading" label="Email Adresse*" required></v-text-field>
             </v-col>
 
             <v-col cols="12">
-              <v-text-field v-model="comment" :disabled="loading" label="Kommentar"></v-text-field>
+              <v-text-field v-model="comment" :disabled="loading" label="Kommentar (optional)"></v-text-field>
             </v-col>
           </v-row>
         </v-card-text>
