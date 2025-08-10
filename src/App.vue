@@ -31,7 +31,7 @@
         home: "Startseite",
         ueberuns: "Über uns",
         training: "Training",
-        intro: "Einführungsveranstaltung",
+        intro: "Einführungsworkshop",
         events: "Events",
         vordemerstenbesuch: "Vor dem ersten Besuch",
         galerie: "Galerie",

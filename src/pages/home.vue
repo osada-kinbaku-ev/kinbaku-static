@@ -14,7 +14,7 @@
               variant="outlined"
               to="intro"
               append-icon="mdi-chevron-right">
-              Einführungsveranstaltung
+              Einführungsworkshop
             </v-btn>
             <v-btn
               class="mb-5"

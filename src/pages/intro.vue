@@ -9,11 +9,11 @@
   <v-container>
     <h1 class="text-center mb-1">Einführungsworkshops</h1>
     <p class="mt-3 text-center">
-      Die Einführungsveranstaltung dient als Grundlage für den <router-link to="training">Unterricht im Kinbaku Dojo Berlin</router-link>, kann aber auch als Schnupperkurs für fesselinteressierte wahrgenommen werden. Durch die Einführungsveranstaltung wollen wir sicherstellen, dass alle, die bei uns unterrichtet werden, über z.B.: sicherheitsrelevante Aspekte Informiert sind, aber auch vereinsinterne Regelungen kennen. Dies nimmt vorab etwas Zeit in Anspruch. Daher gliedern wir die Einführungsveranstaltung vom regulären Training ab. Die Einführungsveranstaltung ist die Voraussetzung um bei unserem Grundstufen Training teilnehmen zu können.
+      Der Einführungsworkshop dient als Grundlage für den <router-link to="training">Unterricht im Kinbaku Dojo Berlin</router-link>, kann aber auch als Schnupperkurs für fesselinteressierte wahrgenommen werden. Durch den Workshop wollen wir sicherstellen, dass alle, die bei uns unterrichtet werden, über z.B.: sicherheitsrelevante Aspekte Informiert sind, aber auch vereinsinterne Regelungen kennen. Dies nimmt vorab etwas Zeit in Anspruch. Daher gliedern wir den Einführungsworkshop vom regulären Training ab. Die Einführung ist die Voraussetzung um bei unserem Grundstufen Training teilnehmen zu können.
     </p>
 
     <p class="mt-3 text-center">
-      Die Einführungsveranstaltung wird überwiegend frontal unterrichtet und unterscheidet sich daher vom üblichen Trainingskonzept. Wir nehmen uns etwas mehr Zeit - wir machen kurze Pausen - bringt euch gern einen Snack mit.
+      Der Workshop wird überwiegend frontal unterrichtet und unterscheidet sich daher vom üblichen Trainingskonzept. Wir nehmen uns etwas mehr Zeit - wir machen kurze Pausen - bringt euch gern einen Snack mit.
     </p>
 
   </v-container>
@@ -47,7 +47,7 @@
   </v-container>
   <v-container>
     <p class="mt-3 text-center">
-      Die Einführungsveranstaltung wird in zwei Varianten angeboten.
+      Der Einführungsworkshop wird in zwei Varianten angeboten.
     </p>
 
     <v-row>
