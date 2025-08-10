@@ -7,7 +7,6 @@
   ></v-img>
 
   <v-container>
-    <h1 id="consent-training" class="text-center">Trainingskultur</h1>
     <p>
       Ein respektvolles Miteinander und gegenseitige Zustimmung sind essentiell für unsere Trainingskultur.
     </p>
@@ -31,7 +30,6 @@
   </v-container>
   <v-container fluid class="m-0 p-0" style="background: #eee;">
     <v-container>
-      <h1 class="text-center mb-1">Vor dem ersten Besuch</h1>
       <v-row>
         <v-col cols="12" md="4" v-for="byg, idx in before_you_go">
           <v-card

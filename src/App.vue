@@ -28,11 +28,12 @@
     data: () => ({
       drawer: false,
       menu: {
-        verein: "Verein",
+        home: "Startseite",
+        ueberuns: "Über uns",
         training: "Training",
         intro: "Einführungsveranstaltung",
         events: "Events",
-        vereinsregeln: "Vereinsregeln",
+        vordemerstenbesuch: "Vor dem ersten Besuch",
         galerie: "Galerie",
       }
     }),

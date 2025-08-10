@@ -29,6 +29,32 @@
     </video-background>
   </v-card>
   <v-container>
+    <h1 class="text-center mb-1">Über uns</h1>
+    <p class="mt-3 text-center">
+      Das Kinbaku Dojo Berlin lehrt die japanischen Fesselkünste Shibari (縛り, Festbinden, Fesseln) / Kinbaku (緊縛, straffes Festbinden) nach Osada-ryu (長田流).
+      Wir sind davon überzeugt, dass niemand Shibari an einem Tag lernt.
+      Unser regelmäßiges Training zielt darauf ab, das Handwerk hinter der Kunst zu verinnerlichen.
+    </p>
+    <p class="text-center mt-6">
+      <v-btn
+        to="vordemerstenbesuch"
+        color="primary"
+        variant="outlined"
+        size="large"
+        class="mb-3"
+      >Vor dem ersten Besuch</v-btn>
+    </p>
+    <p class="text-center">
+      <v-btn
+        to="ueberuns"
+        color="primary"
+        variant="outlined"
+        size="large"
+        class="mb-3"
+      >Mehr über uns</v-btn>
+    </p>
+  </v-container>
+  <v-container fluid class="m-0 p-0" style="background: #eee;">
     <h2 class="text-center mb-0">Aktuelle Workshops und Events</h2>
     <v-row>
       <v-col cols="12" md="4" v-for="event, idx in events">
@@ -67,44 +93,57 @@
 
           <v-divider class="mx-4 mb-1"></v-divider>
 
-          <v-card-title v-if="event.date">{{ event.date.toLocaleDateString("de-DE", date_locale_options) }} {{ event.time }} Uhr</v-card-title>
+          <v-card-title v-if="event.date">{{ event.date }} {{ event.time }} Uhr</v-card-title>
 
           <v-card-actions>
-            <v-btn
-              color="deep-purple-lighten-2"
-              text="Anmelden"
-              block
-              border
-              :href="event.sign_up_url"
-            ></v-btn>
+            <EventRegister :event="event"></EventRegister>
           </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
+    <p class="text-center">
+      <v-btn
+        to="events"
+        color="primary"
+        variant="outlined"
+        size="large"
+        class="mb-3"
+      >Alle Events</v-btn>
+    </p>
   </v-container>
-
+  <v-container>
+    <h1 class="text-center mb-1">Trainingstermine</h1>
+    <p class="my-8">
+      <v-data-table class="text-center"
+        style="background: transparent;"
+        :items="training_times"
+        hide-default-header
+        hide-default-footer
+      ></v-data-table>
+    </p>
+    <p class="text-center">
+      <v-btn
+        to="training"
+        color="primary"
+        variant="outlined"
+        size="large"
+        class="mb-3"
+      >Anmelden</v-btn>
+    </p>
+  </v-container>
 </template>
 
 <script>
 import VideoBackground from 'vue-responsive-video-background-player'
 import video from '@/assets/rope.mp4'
-import {events, intro_times} from '@/data'
+import {events, intro_times, training_times} from '@/data'
 
 export default {
   data: () => ({
     video: video,
     events: events.concat(intro_times),
-    date_locale_options: {
-      weekday: 'short',
-      month: 'numeric',
-      day: 'numeric',
-    },
+    training_times,
   }),
-  mounted: function() {
-    for (const d of this.events) {
-      d.date = new Date(Date.parse(d.date_string));
-    }
-  },
   components: {
     VideoBackground,
   }

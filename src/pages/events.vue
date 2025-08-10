@@ -8,13 +8,16 @@
 
   <v-container v-if="events.length == 0">
     <h1>Keine Events geplant! 😭</h1>
-    <v-btn
-        href="https://www.joyclub.de/party/veranstaltungen/4277291.kinbaku_dojo_berlin.html"
-        color="primary"
-        variant="outlined"
-        size="large"
-        class="mb-3"
-      >Bei Joyclub nach Osada Kinbaku Dojo e.V. Events suchen</v-btn>
+    <p class="text-center">Manche Events werden nur bei Joyclub angekündigt.</p>
+    <p class="text-center mt-4">
+      <v-btn
+          href="https://www.joyclub.de/party/veranstaltungen/4277291.kinbaku_dojo_berlin.html"
+          color="primary"
+          variant="outlined"
+          size="large"
+          class="mb-3"
+        >Bei Joyclub suchen</v-btn>
+    </p>
   </v-container>
 
   <v-container>

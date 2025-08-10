@@ -38,10 +38,28 @@ export let intro_times =  [
     },
   ];
 
+  let date_locale_options = {
+    weekday: 'short',
+    month: 'numeric',
+    day: 'numeric',
+    year: 'numeric',
+  }
+  for (const d of intro_times) {
+    d.date = new Date(Date.parse(d.date_string)).toLocaleDateString("de-DE", date_locale_options)
+  }
+
   export let before_you_go = [
     {title: 'Atmosphäre', text: 'Die Workshops und Trainings sind kein Playspace und zielen auf eine sportlich formale und technische Atmosphäre ab.'},
     {title: 'Vorkenntnisse', text: 'Der Einführungsworkshop benötigt keine Vorkenntnisse. Auch Personen mit Vorkenntnissen sind willkommen! Um beim Training zu fesseln, musst du vorher den Einführungsworkshop besucht haben.'},
     {title: 'Bekleidung', text: 'Wir bitten Euch, auf Straßenkleidung zu verzichten. Kommt in bequemer sportlicher Kleidung, idealerweise enganliegend. T-Shirt und Hose sind gut geeignet.'},
     {title: 'Seile', text: 'Ihr könnt Seile von uns leihen. Wir fesseln ausschließlich mit Juteseilen (oder Hanfseilen). Diese müssen jedoch vorher aufwändig bearbeitet werden. Es ist sinnvoll, dass Ihr verschiedene Seile in die Hand nehmt, bevor Ihr eine Kaufentscheidung trefft. Im Training könnt Ihr viele verschiedene Seiltypen sehen und andere Lernende fragen, ob Ihr deren Seile einmal ausprobieren könnt. Verschiedene Personen haben unterschiedliche Vorlieben, was das richtige Seil betrifft und können Euch Tipps geben. '},
     {title: 'Absage', text: 'Um Euch Kosten zu ersparen, versuchen wir, die frei werdenden Plätze aufzufüllen. Trainings finden in Mieträumen statt. Daher bitten wir um Euer Verständnis, dass wir bei kurzfristiger Absage keine Rückerstattung ermöglichen können. Bitte halte eine Frist von mindestens 24 Stunden für eine Absage ein. '},
+  ];
+
+  export let training_times = [
+    {day: 'montags', time: '18.00 - 19.30', location: 'Kreuzberg'},
+    {day: 'montags', time: '20.00 - 21.30', location: 'Kreuzberg'},
+    {day: 'mittwochs', time: '18.00 - 19.30', location: 'Neukölln'},
+    {day: 'mittwochs', time: '20.00 - 21.30', location: 'Neukölln'},
+    {day: 'donnerstags', time: '18.00 - 21.30', location: 'Pankow'},
   ];

@@ -110,6 +110,7 @@ import image_tk3 from '@/assets/tk3.jpg'
 import image_strappado from '@/assets/strappado.jpg'
 import image_strappado2 from '@/assets/strappado2.jpg'
 import image_single_column_tie from '@/assets/single-column-tie.jpg'
+import { training_times } from '@/data'
 
 export default {
   data: () => ({
@@ -119,13 +120,7 @@ export default {
       {name: 'Strappado', level: '9. Kyu', subtitle: 'Armfesselung', images: [image_strappado, image_strappado2], desc: 'Einsteigerfesselung, die Schülern des 9. Kyu sowohl sichere und schnelle Handhabung des Seils als auch aufmerksamen Umgang mit der gefesselten Person näher bringt.'},
       {name: 'Takate Kote', level: '8. Kyu', subtitle: 'Oberkörperfesselung', images: [image_tk, image_tk2, image_tk3], desc: 'Als grundlegendes Element vieler Sessions wird beim TK auf Präzision beim Fesseln großer Wert gelegt. Diese Fesselung ist zentrales Element des 8. Kyu und bildet die Grundlage für Einsteigersuspensions.'},
     ],
-    training_times: [
-      {day: 'montags', time: '18.00 - 19.30', location: 'Kreuzberg'},
-      {day: 'montags', time: '20.00 - 21.30', location: 'Kreuzberg'},
-      {day: 'mittwochs', time: '18.00 - 19.30', location: 'Neukölln'},
-      {day: 'mittwochs', time: '20.00 - 21.30', location: 'Neukölln'},
-      {day: 'donnerstags', time: '18.00 - 21.30', location: 'Pankow'},
-    ],
+    training_times,
   }),
   components: {
     VideoBackground,

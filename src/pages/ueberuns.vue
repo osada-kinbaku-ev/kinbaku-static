@@ -8,7 +8,7 @@
   <v-container>
 
     <p>
-      Herzlich willkommen auf der Website des Osada Kinbaku Dojo e.V., dem Ort für Shibari-Begeisterte in Berlin!
+      Der Osada Kinbaku Dojo e.V. ist der Ort für Shibari-Begeisterte in Berlin!
       Unser gemeinnütziger Verein widmet sich der Vermittlung der japanischen Seilkunst Shibari &ndash; auch bekannt als Kinbaku &ndash; sowie der Schaffung einer Gemeinschaft von Menschen, die sich für die Kunst des Fesseln interessieren. Unser Shibari-Dojo bietet regelmäßige Unterrichtseinheiten und Workshops an, die das Erlernen und Verfeinern von Techniken und Fertigkeiten im Umgang mit Seilen ermöglichen. Dabei legen wir besonderen Wert auf körperliche und seelische Gesundheit sowie auf den Respekt für die Grenzen anderer.
     </p>
     <p>
@@ -18,10 +18,10 @@
     <p>
       Schaut Euch um &ndash; wir freuen uns auf Euch!
     </p>
-      
+
     <h2 id="ziele">Ziele des Vereins</h2>
     <p>
-      Der Verein hat sich zum Ziel gesetzt, Menschen mit Interesse an Shibari zu verbinden und diese in den Bereichen Fingerfertigkeit und Technik, Sicherheit und Consent, Bewegungsoptimierung und ästhetik zu fördern. Dabei spielt die europäische Interpretation der japanischen Herkunft eine wichtige Rolle.
+      Der Verein hat sich zum Ziel gesetzt, Menschen mit Interesse an Shibari zu verbinden und diese in den Bereichen Fingerfertigkeit und Technik, Sicherheit und Consent, Bewegungsoptimierung und Ästhetik zu fördern. Dabei spielt die europäische Interpretation der japanischen Herkunft eine wichtige Rolle.
       Ein weiteres Ziel des Trainings ist es, das Muskelgedächtnis zu schulen, um eine möglichst hohe Sicherheit zu gewährleisten und Risiken zu minimieren. Durch gezielte Wiederholung einzelner übungen entsteht Routine, die in Gefahrensituationen Ruhe und Sicherheit verleiht.
     </p>
     <p>
@@ -47,7 +47,7 @@
     <p>
       Eine Trainingseinheit kostet 20,- &euro;.
     </p>
-      
+
       <ul>
         <li>
           Beispiel 1:&nbsp;Da sich die Vereinsmitgliedschaften insbesondere an die fesselnden Personen richten, die wiederum mit verschiedenen Trainingspartner:innen kommen können, wird in der Regel die Tagesmitgliedschaft von den Fesselnden übernommen.
@@ -59,9 +59,9 @@
           Beispiel 3:&nbsp;Switchen mit Vereinsmitglied. Kostet 10,- &euro; pro Trainingseinheit für das Nichtmitglied.
         </li>
       </ul>
-      
 
-    
+
+
 
     <h3>Einzelunterricht</h3>
 

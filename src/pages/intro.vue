@@ -133,17 +133,6 @@ export default {
   }),
   components: {
   },
-  mounted: function() {
-    let date_locale_options = {
-      weekday: 'short',
-      month: 'numeric',
-      day: 'numeric',
-      year: 'numeric',
-    }
-    for (const d of this.intro_times) {
-      d.date = new Date(Date.parse(d.date_string)).toLocaleDateString("de-DE", date_locale_options)
-    }
-  },
   computed: {
     intro_headers: function () {
       return this.mobile ?
